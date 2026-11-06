@@ -15,11 +15,11 @@ Session ID: `arena-5006a5b5` (branch `arena/5006a5b5-cupertino1`)
 | T1 | Research: CA Prop 13 / Prop 19 property tax law, Santa Clara County + SF tax rates (official sources) | in progress | arena-5006a5b5 | docs/data/*.json, docs/inheritance-tax.html |
 | T2 | Research: Federal estate/inheritance tax thresholds, exemptions, step-up basis, pending law changes (official sources) | in progress | arena-5006a5b5 | docs/data/*.json, docs/inheritance-tax.html |
 | T3 | Research: Insurance cost benchmarks (Cupertino primary residence, 94122 rental) + utilities/maintenance baselines | in progress | arena-5006a5b5 | docs/data/*.json, docs/property-data.html |
-| T4 | Build projections engine (property tax, values, costs, rent, scenarios 2026–2050) | unclaimed | — | scripts/projections.py, docs/data/projections.json |
-| T5 | Build GitHub Pages site (landing + subpages, dashboard UI, tables with source links) | unclaimed | — | docs/** |
-| T6 | Line-by-line verification pass; Flagged for Review page for unverified/irregular rows | unclaimed | — | docs/flagged.html, COORDINATION.md |
-| T7 | Executive summary + inheritance process step-by-step + decision analysis/recommendation | unclaimed | — | docs/executive-summary.html, docs/inheritance-process.html, docs/decision-analysis.html |
-| T8 | Integration: merge, re-verify, link check, enable GitHub Pages, PR → main, merge, confirm deploy | unclaimed | — | COORDINATION.md, .github/workflows/* |
+| T4 | Build projections engine (property tax, values, costs, rent, scenarios 2026–2050) | in progress | arena-5006a5b5 | scripts/projections.py, docs/data/projections.json |
+| T5 | Build GitHub Pages site (landing + subpages, dashboard UI, tables with source links) | in progress | arena-5006a5b5 | docs/** |
+| T6 | Line-by-line verification pass; Flagged for Review page for unverified/irregular rows | in progress | arena-5006a5b5 | docs/flagged.html, COORDINATION.md |
+| T7 | Executive summary + inheritance process step-by-step + decision analysis/recommendation | in progress | arena-5006a5b5 | docs/executive-summary.html, docs/inheritance-process.html, docs/decision-analysis.html |
+| T8 | Integration: merge, re-verify, link check, enable GitHub Pages, PR → main, merge, confirm deploy | in progress | arena-5006a5b5 | COORDINATION.md, .github/workflows/* |
 
 Status values: `unclaimed` | `in progress` | `done` | `needs review`
 ("needs review" = published on the site's Flagged for Review page; does not block anything.)
