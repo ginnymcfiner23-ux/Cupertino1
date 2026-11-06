@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inheritance Decision Dashboard — Executive Summary</title>
+<meta name="description" content="Decision dashboard for two inherited properties: property tax, operating costs, inheritance taxes, and a sell-versus-hold comparison for 2026-2050.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="verdict">
+    <h2>The decision, in one screen</h2>
+    <ul>
+      <li><strong>There is no federal or California estate or inheritance tax on this inheritance.</strong> The federal estate tax only applies above $15,000,000 per person in 2026 and California prohibits estate, inheritance and gift taxes by statute (R&amp;T &sect;13301). The real taxes are <em>property tax reassessment</em> and <em>capital-gain tax on a later sale</em>.</li>
+      <li><strong>Everything now depends on one document: the trust.</strong> Funding a revocable trust today does <em>not</em> trigger reassessment (R&amp;T &sect;62(d)). Whether the low Prop&nbsp;13 base survives the owner&rsquo;s death depends on the vesting language &mdash; and the difference is roughly <strong>$44,000&ndash;$59,000 a year</strong> on the Cupertino house alone, depending on whether Prop&nbsp;19 is available.</li>
+      <li><strong>PROPERTY_CUPERTINO: keep it.</strong> If the base is preserved, the property tax in <span data-num="inherit-year">2045</span> is about <span data-num="cup-tax-base">$9,000</span> a year on an asset worth about <span data-num="cup-fmv">$6.0 million</span>. If it is reassessed to market value it becomes <span data-num="cup-tax-full">$68,000</span>. Living in it keeps the Prop&nbsp;19 claim alive as a second line of defence.</li>
+      <li><strong>PROPERTY_SF: sell it after the inheritance, unless counsel confirms the base survives.</strong> A three-unit building with two tenancies is not the owner&rsquo;s &ldquo;family home&rdquo;, so no Prop&nbsp;19 exclusion is expected. Reassessed to market value, the property tax goes from about <span data-num="sf-tax-base">$2,000</span> to about <span data-num="sf-tax-full">$41,000</span> a year and net operating income collapses from about <span data-num="sf-noi-base">$69,000</span> to about <span data-num="sf-noi-full">$30,000</span>.</li>
+      <li><strong>Do not sell PROPERTY_CUPERTINO at the inheritance.</strong> Selling costs roughly 2% plus 0.11% state transfer tax plus tax on a small post-death gain &mdash; and gives up a very cheap, appreciating shelter. Sell only if the trust base is lost or if liquidity is needed.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>The numbers that matter <span class="h2-note">inheritance year <span data-num="inherit-year">2045</span>, 3.5% appreciation, base case</span></h2>
+    <div data-kpis></div>
+  </section>
+
+  <section>
+    <h2>Option by option</h2>
+    <p class="lede">Five options, one verdict each. The financial detail behind each line is on the
+      <a href="scenarios.html">scenarios page</a>, where the assumptions can be changed and everything re-runs.</p>
+    <div data-table="decisions"></div>
+  </section>
+
+  <section>
+    <h2>Why the trust is the whole answer</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Funding the trust is free of reassessment</h3>
+        <p>Revenue and Taxation Code &sect;62(d): a transfer to a trust that is revocable, or in which the trustor is a present beneficiary, is <strong>not</strong> a change of ownership. Deeding both properties into the trust today keeps their assessed values and issues no supplemental tax bill.</p>
+        <p class="small muted">One small cost: recording the deed terminates the Homeowners&rsquo; Exemption for the coming fiscal year (worth about $80). File it again.</p>
+      </div>
+      <div class="card">
+        <h3>But death is the trigger</h3>
+        <p>BOE Legal Letter Advice 80/25: when a revocable trust becomes irrevocable, the vesting of an interest in the property in anyone <strong>other than the trustor or the trustor&rsquo;s spouse</strong> is a change of ownership. A later distribution out of the trust to a child is a parent-to-child transfer subject to Prop&nbsp;19 (BOE Legal Opinion 220.0791).</p>
+        <p class="small muted">So the trust must continue for the beneficiaries, not vest outright at death. That is a drafting instruction, and it needs a written opinion.</p>
+      </div>
+      <div class="card">
+        <h3>And the county reassesses on the date of death</h3>
+        <p>The Santa Clara County Assessor states that &ldquo;the reassessment of property acquired by inheritance from an estate or living trust occurs as of the date of the death of the former owner, not on the date of distribution to the beneficiary&rdquo; &mdash; and that an assessment is made in the name of the estate even if the property is sold rather than distributed.</p>
+        <p class="small muted">Which means the trust drafting is what determines whether that reassessment means $9,000 a year or $68,000.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The tax drag, drawn out</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>PROPERTY_CUPERTINO &mdash; annual property tax</h3>
+        <div data-chart="chart:cupertino-tax"></div>
+        <p class="small muted">Solid line: the assessed value is preserved and escalates at the 2% Prop&nbsp;13 cap. Dashed line: the property is reassessed to market value in the inheritance year. Nothing between the two is possible &mdash; the outcome depends entirely on the trust.</p>
+      </div>
+      <div class="card">
+        <h3>PROPERTY_SF &mdash; annual property tax</h3>
+        <div data-chart="chart:sf-tax"></div>
+        <p class="small muted">The gap between the two lines is the entire reason to sell the San Francisco building after the inheritance if the base is not protected. Roughly $39,000 a year from the inheritance year onwards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What to do next, in order</h2>
+    <ol class="steps">
+      <li>
+        <h4>Pull the official parcel records</h4>
+        <div class="when"><span class="badge official">official</span> &middot; Now &middot; 1 month</div>
+        <p class="small">One lookup each for PROPERTY_CUPERTINO (Santa Clara County Assessor: parcel number, tax rate area, assessed value) and PROPERTY_SF (San Francisco Treasurer portal: assessed value and the ad valorem tax line). This closes four of the sixteen open flags at once and replaces the illustrative assessed value used in the Cupertino model.</p>
+      </li>
+      <li>
+        <h4>Get a written trust-drafting opinion from California estate counsel</h4>
+        <div class="when"><span class="badge official">official</span> &middot; Now &middot; the highest-value action on this page</div>
+        <p class="small">Ask for an opinion on the vesting language that keeps the trust alive for the beneficiaries, whether the Cupertino house qualifies as the transferor&rsquo;s principal residence for Prop&nbsp;19, what happens if a beneficiary stops occupying it, and whether the County Assessor will pre-confirm the treatment. Do not fund the trust until this is settled.</p>
+      </li>
+      <li>
+        <h4>Decide the San Francisco strategy and get the one number that unlocks it</h4>
+        <div class="when"><span class="badge official">official</span> &middot; Now</div>
+        <p class="small">Selling during the owner&rsquo;s lifetime avoids reassessment completely, but taxes the appreciation since purchase at ordinary rates. That comparison needs the original purchase price and date for PROPERTY_SF &mdash; which is not yet supplied, so the site cannot quantify it (flag F12).</p>
+      </li>
+      <li>
+        <h4>Get insurance quotes for both properties</h4>
+        <div class="when"><span class="badge official">official</span> &middot; Now &middot; 1&ndash;2 months</div>
+        <p class="small">An HO-3 for the Cupertino house and a DP-3 for the San Francisco building. The premiums are the largest blank in the cost model, and the owner&rsquo;s $1,500 estimate is at the very bottom of the plausible range.</p>
+      </li>
+      <li>
+        <h4>Fund the trust, re-file the Homeowners&rsquo; Exemption, and calendar the annual dates</h4>
+        <div class="when"><span class="badge official">official</span> &middot; Now</div>
+        <p class="small">Jan&nbsp;1 lien date, Feb&nbsp;15 exemption deadline, Dec&nbsp;10 and Apr&nbsp;10 instalments, Jul&nbsp;2 &ndash; Sep&nbsp;15 appeal window, and the biennial BOE adjustment to the Prop&nbsp;19 allowance. The full checklist is on the <a href="inheritance-process.html">process page</a>.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Eighteen open items</h2>
+    <p class="lede">Nothing on this site is asserted without a source, and anything that could not be confirmed from an official source is left blank and flagged. The full list, with the action needed for each, is on the
+      <a href="flagged.html">Flagged for review</a> page.</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <h4>High priority</h4>
+        <ul class="small">
+          <li><strong>F1</strong> &mdash; the owner&rsquo;s San Francisco tax implies a 2.135% rate against an official 1.18162%.</li>
+          <li><strong>F4 / F5</strong> &mdash; the Cupertino implied rate is too high and the parcel&rsquo;s own tax rate area has not been located.</li>
+          <li><strong>F6</strong> &mdash; $30&ndash;70 a month for three units of electricity implies 3.3 cents per kWh against a published 40.60.</li>
+          <li><strong>F9</strong> &mdash; no insurance premium can be confirmed; both are blank by rule.</li>
+          <li><strong>F10 / F11</strong> &mdash; the trust vesting question and the San Francisco Prop&nbsp;19 question are both unresolved legal points.</li>
+          <li><strong>F16</strong> &mdash; the owner&rsquo;s source spreadsheet was unavailable at build time, so most of the historical table is blank by design.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Medium and low</h4>
+        <ul class="small">
+          <li><strong>F2 / F3</strong> &mdash; the San Francisco assessment ladder and the owner&rsquo;s offset growth column.</li>
+          <li><strong>F7 / F7b / F8</strong> &mdash; the Cupertino water provider and sewer rate, and the San Francisco meter size, usage and parcel area.</li>
+          <li><strong>F12</strong> &mdash; the original purchase basis for both properties.</li>
+          <li><strong>F13 / F14 / F15</strong> &mdash; the solar export rate, the two unpublished rate books, and the appreciation assumption.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+      <p><a href="decision/index.html">Open the decision centre &mdash; live / rent / sell model, 2026&ndash;2050 projections, law watch, flagged items &rarr;</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

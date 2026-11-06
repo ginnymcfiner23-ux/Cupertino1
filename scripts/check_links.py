@@ -6,8 +6,10 @@ Exit code 0 = all internal links OK.
 import os, re, sys, html
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-PAGES = ["index.html"] + [os.path.join("pages", f) for f in sorted(os.listdir(os.path.join(ROOT, "pages")))
-                          if f.endswith(".html")]
+SITE = os.path.join(ROOT, "docs", "decision")
+PAGES = [os.path.join("docs", "decision", "index.html")] + [
+    os.path.join("docs", "decision", "pages", f)
+    for f in sorted(os.listdir(os.path.join(SITE, "pages"))) if f.endswith(".html")]
 
 href_re = re.compile(r'(?:href|src)="([^"]+)"')
 

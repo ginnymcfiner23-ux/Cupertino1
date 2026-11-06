@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scenarios — Inheritance Decision Dashboard</title>
+<meta name="description" content="Interactive scenario model: inheritance year, appreciation, discount rate, reinvestment return and rent, with sell-versus-hold NPVs for both properties.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="toc">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#controls">Model controls</a></li>
+      <li><a href="#options">Option comparison</a></li>
+      <li><a href="#reassess">Reassessment impact</a></li>
+      <li><a href="#charts">Charts</a></li>
+      <li><a href="#assumptions">Every assumption</a></li>
+      <li><a href="#read">How to read the model</a></li>
+    </ul>
+  </section>
+
+  <section id="controls">
+    <h2>Model controls</h2>
+    <p class="lede">Every number on this page is computed from the dataset plus these settings. Nothing is hard-coded behind the scenes; change a setting and every table and chart on the site re-runs.</p>
+    <div data-controls></div>
+  </section>
+
+  <section id="options">
+    <h2>Option comparison</h2>
+    <div data-table="dynamic:scenarios"></div>
+    <div class="callout action">
+      <h4>How to use this table</h4>
+      <p>Compare the two &ldquo;base preserved&rdquo; lines against the two &ldquo;reassessed&rdquo; lines for each property. If the base is preserved, holding wins comfortably on both properties &mdash; the Cupertino house because it is a cheap shelter for a large appreciating asset, the San Francisco building because the tax stays negligible. If the base is lost, holding the San Francisco building collapses and selling it after the inheritance wins; holding the Cupertino house still beats selling it if the heirs can live in it and claim Prop&nbsp;19, because the &sect;1014 step-up makes the taxable gain on a sale so small.</p>
+    </div>
+  </section>
+
+  <section id="reassess">
+    <h2>Reassessment impact</h2>
+    <div data-table="dynamic:reassessment"></div>
+  </section>
+
+  <section id="charts">
+    <h2>Charts</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>PROPERTY_CUPERTINO &mdash; annual property tax</h3>
+        <div data-chart="chart:cupertino-tax"></div>
+      </div>
+      <div class="card">
+        <h3>PROPERTY_SF &mdash; annual property tax</h3>
+        <div data-chart="chart:sf-tax"></div>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card">
+        <h3>PROPERTY_SF &mdash; net operating income</h3>
+        <div data-chart="chart:sf-noi"></div>
+      </div>
+      <div class="card">
+        <h3>PROPERTY_CUPERTINO &mdash; market value</h3>
+        <div data-chart="chart:cupertino-value"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assumptions">
+    <h2>Every assumption</h2>
+    <div data-table="assumptions"></div>
+  </section>
+
+  <section id="read">
+    <h2>How to read the model</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h4>What the NPV actually compares</h4>
+        <p class="small">For a <strong>hold</strong> option, the NPV is the discounted value of the annual net cash flow over the horizon plus the discounted terminal market value, measured at the inheritance year. For <strong>PROPERTY_CUPERTINO</strong> the annual cash flow is the market rent (as a benefit, whether received or simply avoided) less operating costs and property tax. For <strong>PROPERTY_SF</strong> it is the net operating income from the two rented units; the owner-occupied third unit is not valued as rent, which makes the hold option conservative.</p>
+        <p class="small">For a <strong>sell</strong> option, the NPV is the net sale proceeds (after transfer taxes, sale costs and capital-gain tax on the gain over the &sect;1014 stepped-up basis) grown at the reinvestment return and discounted back to the inheritance year.</p>
+      </div>
+      <div class="card">
+        <h4>What it deliberately does not do</h4>
+        <ul class="small">
+          <li>It does not value the owner-occupied Cupertino house as housing consumed.</li>
+          <li>It does not value the owner&rsquo;s own labour in maintaining the San Francisco building.</li>
+          <li>It does not model a lifetime sale, because the original purchase basis was not supplied (flag F12).</li>
+          <li>It does not model the FAIR Plan, a decline-in-value year, or a Prop&nbsp;8 temporary reduction.</li>
+          <li>It uses the owner&rsquo;s $1,800,000 and $3,100,000 market estimates; those are estimates, not appraisals.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

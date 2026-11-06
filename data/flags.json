@@ -1,0 +1,19 @@
+{
+  "flags": [
+    {
+      "topic": "property values and assessments",
+      "status": "unverified",
+      "value": null
+    },
+    {
+      "topic": "insurance, utilities, repairs, rental income",
+      "status": "unverified",
+      "value": null
+    },
+    {
+      "topic": "2040-2050 forecasts and future law",
+      "status": "not forecast",
+      "value": null
+    }
+  ]
+}

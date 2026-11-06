@@ -642,7 +642,8 @@ def page_sources():
 
 # ---------------------------------------------------------------- main
 def main():
-    write("index.html", shell("Dashboard", page_index(prefix=""), prefix="", active="index.html"))
+    base = "docs/decision"
+    write(f"{base}/index.html", shell("Dashboard", page_index(prefix=""), prefix="", active="index.html"))
     pages = {
         "executive-summary.html": page_exec,
         "properties.html": page_properties,
@@ -657,7 +658,7 @@ def main():
     }
     for name, fn in pages.items():
         active = f"pages/{name}"
-        write(f"pages/{name}", shell(name.replace("-", " ").title(), fn(), prefix="../", active=active))
+        write(f"{base}/pages/{name}", shell(name.replace("-", " ").title(), fn(), prefix="../", active=active))
 
 if __name__ == "__main__":
     main()
