@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision — Live In, Rent, or Sell the Cupertino Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <div class="inner">
+    <div class="brand">Cupertino1<span> · Decision</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="taxes.html">Taxes</a>
+      <a href="costs.html">Costs</a>
+      <a href="projections.html">Projections</a>
+      <a href="decision.html" class="active">Decision</a>
+      <a href="inheritance-process.html">Process</a>
+      <a href="thresholds.html">Thresholds</a>
+      <a href="law-changes.html">Law Changes</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container tight">
+  <h1>Decision Analysis: Live In, Rent, or Sell?</h1>
+  <p>The choice is evaluated at the modeled inheritance year (~2045), using the projection model on the <a href="projections.html">Projections</a> page. All user-supplied property values and amounts are masked on this public site; the internal copy holds the unmasked figures. The San Francisco home (primary residence + rental income from two of three units) is the household's current housing and stays in the picture under every option.</p>
+
+  <h2>Option A — Sell the Cupertino home shortly after inheritance, reinvest the proceeds</h2>
+  <table>
+    <tr><th>Factor</th><th>Estimate</th><th>Basis / status</th></tr>
+    <tr><td>Sale price (projected market value at inheritance)</td><td>[MASKED] — model output from masked inputs</td><td class="src"><span class="tag u">Projection — unverified</span></td></tr>
+    <tr><td>Selling costs (~5%: commission, repairs, escrow)</td><td>[MASKED] — ~5% of sale price</td><td class="src"><span class="tag u">Industry rule — unverified</span></td></tr>
+    <tr><td>Net proceeds</td><td>[MASKED]</td><td class="src"><span class="tag u">Model output</span></td></tr>
+    <tr><td>Capital gains tax</td><td>~$0 expected</td><td class="src">Stepped-up basis = date-of-death value (IRC §1014 / <a href="https://www.irs.gov/publications/p551" target="_blank" rel="noopener">IRS Pub 551</a>); sell near basis → little/no gain</td></tr>
+    <tr><td>Ongoing costs after sale</td><td>$0</td><td class="src">No tax, insurance, water, electricity, maintenance on this home</td></tr>
+    <tr><td>Reinvestment income (4% withdrawal rule)</td><td>[MASKED] / year — 4% of net proceeds</td><td class="src"><span class="tag u">Model output — not investment advice</span></td></tr>
+    <tr><td>Reinvestment income (7% total return, pre-tax)</td><td>[MASKED] / year — 7% of net proceeds</td><td class="src"><span class="tag u">Model output — not investment advice</span></td></tr>
+  </table>
+
+  <h2>Option B — Move into the Cupertino home as primary residence</h2>
+  <table>
+    <tr><th>Factor</th><th>Estimate</th><th>Basis / status</th></tr>
+    <tr><td>Requirements</td><td>Move in within 1 year of transfer; file BOE-19-P within 3 years; file BOE-266 homeowner's exemption within 1 year</td><td class="src"><a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag v">verified rule</span></td></tr>
+    <tr><td>Property tax (Prop 19 partial exclusion)</td><td>[MASKED] / year — reassessed value (market value above the inflation-adjusted cap) × combined rate</td><td class="src">Projection · <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag u">unverified</span></td></tr>
+    <tr><td>Homeowners insurance</td><td>[MASKED] — not quoted; likely materially above statewide average</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Water</td><td>[MASKED] — user estimate</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Electricity (solar)</td><td>[MASKED] — user estimate; solar may offset most usage</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Maintenance &amp; repairs (~1% of value)</td><td>[MASKED] / year — rule of thumb</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Trade-off on the SF home</td><td>Moving out ends its primary-residence status; the vacant 3rd unit could be rented (rent masked); §121 home-sale exclusion ($250K/$500K) requires 2 of 5 years' use (<a href="https://www.irs.gov/publications/p523" target="_blank" rel="noopener">IRS Pub 523</a>)</td><td class="src"><span class="tag v">Verified rule</span> · rent <span class="tag u">unverified</span></td></tr>
+  </table>
+
+  <h2>Option C — Rent out the Cupertino home</h2>
+  <table>
+    <tr><th>Factor</th><th>Estimate</th><th>Basis / status</th></tr>
+    <tr><td>Property tax (full reassessment — rentals get no Prop 19 exclusion)</td><td>[MASKED] / year — full market value × combined rate</td><td class="src">Projection · <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag u">unverified</span></td></tr>
+    <tr><td>Break-even rent (tax + est. insurance + est. maintenance, pre-income-tax)</td><td>[MASKED] / month</td><td class="src"><span class="tag u">Model output — unverified inputs</span></td></tr>
+    <tr><td>Achievable market rent</td><td class="blank">Not estimated — no reliable source located; left blank and flagged</td><td class="src"><span class="tag u">Unverified — value withheld</span></td></tr>
+    <tr><td>Rental income tax</td><td>Rent taxed federally + by CA; depreciation recapture on sale</td><td class="src">General federal/CA income tax rules · <span class="tag u">not modeled</span></td></tr>
+  </table>
+
+  <h2>Side-by-side comparison (modeled, ~2045)</h2>
+  <table>
+    <tr><th>Measure</th><th>A — Sell &amp; reinvest</th><th>B — Live in it</th><th>C — Rent it out</th></tr>
+    <tr><td>Annual property tax</td><td>$0</td><td>[MASKED] / year (reassessed)</td><td>[MASKED] / year (full reassessment)</td></tr>
+    <tr><td>Insurance + water + electric + maintenance</td><td>$0</td><td>[MASKED] — not reliably estimated</td><td>[MASKED] — not reliably estimated</td></tr>
+    <tr><td>Cash income produced</td><td>[MASKED] / year at 4% withdrawal</td><td>$0</td><td>Rent unknown; break-even [MASKED] / year</td></tr>
+    <tr><td>Capital gains on sale</td><td>~$0 (stepped-up basis)</td><td>Deferred; §121 exclusion possible if later sold as primary residence</td><td>Deferred; depreciation recapture applies</td></tr>
+    <tr><td>Housing provided</td><td>No (SF home remains)</td><td>Yes — replaces SF home as primary residence</td><td>No</td></tr>
+    <tr><td>Complexity</td><td>Low — sell, invest, done</td><td>High — move, file Prop 19 forms, carry reassessed taxes</td><td>High — landlord, reassessment, tenant risk</td></tr>
+  </table>
+
+  <div class="card">
+    <h2>Recommendation</h2>
+    <p>Under current law and this model, <strong>sell the Cupertino home shortly after inheritance and reinvest the proceeds</strong>, while keeping the San Francisco home as the primary residence with its rental income.</p>
+    <div class="badge-rec">RECOMMENDED: Sell &amp; reinvest — highest projected net income, lowest cost and complexity.</div>
+    <ul>
+      <li><strong>Why sell:</strong> Proposition 19 removes the old "keep the parents' low tax base" benefit for anyone who doesn't move in. Holding the Cupertino home means reassessed property taxes (materially higher than the current low-basis bill) plus insurance and maintenance, while selling near date-of-death value triggers little or no capital gains tax (stepped-up basis) and puts the proceeds to work.</li>
+      <li><strong>Why not rent:</strong> Rentals receive no Prop 19 exclusion → full reassessment. Break-even rent must cover the reassessed tax plus insurance and maintenance before income taxes; achievable rent was not verified.</li>
+      <li><strong>Why not live in it (unless you want to):</strong> Only sensible if an heir actually wants to live in Cupertino and can carry reassessed property taxes plus insurance and maintenance. It also ends the SF home's primary-residence status (though a 3rd rentable unit becomes available).</li>
+    </ul>
+  </div>
+
+  <div class="note warn">
+    <strong>Key uncertainties:</strong> future appreciation, tax law (Prop 19 repeal initiative for Nov 2026 ballot is pending; federal estate-tax rules could change), insurance cost, achievable rent, actual maintenance. Re-run this analysis with real figures at the time of inheritance. Not financial, legal, or tax advice.
+  </div>
+
+  <div class="footer">
+    Cupertino1 · Decision · Personal data anonymized · See <a href="sources.html">Sources</a> · <a href="flagged-for-review.html">Flagged for Review</a>
+  </div>
+</div>
+</body>
+</html>

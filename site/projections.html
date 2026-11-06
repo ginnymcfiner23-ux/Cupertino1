@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projections — Home Value, Assessed Value &amp; Property Tax by Year</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <div class="inner">
+    <div class="brand">Cupertino1<span> · Projections</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="taxes.html">Taxes</a>
+      <a href="costs.html">Costs</a>
+      <a href="projections.html" class="active">Projections</a>
+      <a href="decision.html">Decision</a>
+      <a href="inheritance-process.html">Process</a>
+      <a href="thresholds.html">Thresholds</a>
+      <a href="law-changes.html">Law Changes</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container tight">
+  <h1>Projections by Year</h1>
+  <p>Cupertino home ([ZIP_CUPERTINO]): current market [MASKED]; current assessed [MASKED] (user records, withheld). Inheritance expected ~<strong>2040–2050</strong>; the table uses <strong>2045</strong> as the midpoint planning year. All projection rows are model outputs from stated assumptions — flagged <span class="tag u">unverified</span> — not facts or official figures. User-supplied values are masked on this public site.</p>
+
+  <div class="note">
+    <strong>Assumptions (labeled; none inferred from official data):</strong>
+    <ul>
+      <li>Market appreciation <strong>5.0%/year</strong> — FHFA all-transactions House Price Index, San Jose-Sunnyvale-Santa Clara MSA, 10-year change 2015–2025 ≈ +62.5% (~5.0%/yr). Actual future appreciation is unknowable. <a href="https://www.fhfa.gov/DataTools/Downloads/Pages/House-Price-Index-Download.aspx" target="_blank" rel="noopener">FHFA HPI</a> · <span class="tag u">assumption</span></li>
+      <li>Assessed value grows <strong>2%/year</strong> maximum under Proposition 13 while ownership is unchanged <a href="https://asr.santaclaracounty.gov/home" target="_blank" rel="noopener">(Santa Clara County Assessor)</a></li>
+      <li>Proposition 19 value cap indexed at 2%/year from $1,044,586 (transfers Feb 2025–Feb 2027) <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">(CA BOE)</a> — public statutory figure</li>
+      <li>Effective combined property tax rate <strong>1.18%</strong> for Cupertino (typical Santa Clara County range 1.12–1.24%) <span class="tag u">rate varies by tax rate area</span></li>
+      <li>Inheritance year modeled: <strong>2045</strong> (midpoint of 2040–2050)</li>
+      <li>Formulas: market value = prior value × 1.05; assessed value = prior assessed × 1.02 (Prop 13 cap); if heir moves in and market exceeds factored base-year value + Prop 19 cap, new assessed ≈ market − cap; property tax = assessed × combined rate</li>
+    </ul>
+  </div>
+
+  <table>
+    <tr>
+      <th>Year</th><th class="num">Cupertino market value (projected)</th><th class="num">Assessed value, no reassessment (Prop 13 cap 2%)</th><th class="num">Prop 19 cap (indexed)</th><th class="num">New assessed value — heir moves in (market − cap)</th><th class="num">Property tax if occupied (~1.18%)</th><th class="num">Property tax if rented/sold (full reassessment, ~1.18%)</th>
+    </tr>
+    <tr><td class="nowrap">2026 (today)</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">$1,044,586 (statutory)</td><td class="num">[MASKED] — formula: market − cap</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td></tr>
+    <tr><td class="nowrap">2030</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED] — indexed</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td></tr>
+    <tr><td class="nowrap">2035</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED] — indexed</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td></tr>
+    <tr><td class="nowrap">2040</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED] — indexed</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td></tr>
+    <tr><td class="nowrap"><strong>2045 — inheritance (modeled)</strong></td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED] — indexed</td><td class="num">[MASKED]</td><td class="num"><strong>[MASKED] /yr</strong></td><td class="num"><strong>[MASKED] /yr</strong></td></tr>
+    <tr><td class="nowrap">2050</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED] — indexed</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td><td class="num">[MASKED]</td></tr>
+  </table>
+  <p class="num" style="font-size:0.85rem;color:var(--muted)">"New assessed value — heir moves in" applies Proposition 19: if market value exceeds factored base-year value + cap, the excess over the cap is added back (new assessed ≈ market − cap). <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag u">model output — unverified</span></p>
+
+  <div class="card">
+    <h2>San Francisco home ([ZIP_SAN_FRANCISCO]) — reference projection</h2>
+    <table>
+      <tr><th>Item</th><th class="num">Value</th><th>Source</th></tr>
+      <tr><td>Estimated market value (Nov 2026)</td><td class="num">[MASKED] — user-provided, withheld</td><td><span class="tag p">User-provided — unverified</span></td></tr>
+      <tr><td>Appreciation assumption</td><td class="num">4.5%/year</td><td class="src">FHFA HPI San Francisco-Oakland-Fremont MSA 5-year change ≈ +25% (~4.6%/yr) · <span class="tag u">assumption</span></td></tr>
+      <tr><td>Projected market value 2045</td><td class="num">[MASKED]</td><td class="src"><span class="tag u">model output — unverified</span></td></tr>
+      <tr><td>Assessed value 2025 (user records)</td><td class="num">[MASKED]</td><td><span class="tag p">User-provided — unverified</span></td></tr>
+      <tr><td>Assessed value grows max 2%/yr (no ownership change)</td><td class="num">[MASKED] by 2045</td><td class="src"><span class="tag u">model output</span> · Prop 13</td></tr>
+      <tr><td>Current rental income (2 of 3 units)</td><td class="num">[MASKED] — user-provided, withheld</td><td><span class="tag p">User-provided — unverified</span></td></tr>
+    </table>
+  </div>
+
+  <div class="note warn">
+    <strong>Projections are not predictions.</strong> Appreciation can be negative (San Jose MSA was −0.5% in 2024–2025 per FHFA), tax rates and the Prop 19 cap change, and inheritance timing is uncertain. Re-run these numbers with actual figures at the time of inheritance.
+  </div>
+
+  <div class="footer">
+    Cupertino1 · Projections · Personal data anonymized · See <a href="sources.html">Sources</a> · <a href="flagged-for-review.html">Flagged for Review</a>
+  </div>
+</div>
+</body>
+</html>
