@@ -1,0 +1,18 @@
+
+:root{--ink:#1b2430;--muted:#5a6572;--line:#d9dee5;--bg:#f7f8fa;--ok:#1b7f3b;--warn:#b35c00;--user:#3459a6;--accent:#0b5cad}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+header{background:#14253a;color:#fff;padding:12px 20px}.brand{font-weight:700}.brand span{font-weight:400;opacity:.7;margin-left:8px;font-size:13px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px}nav a{color:#cfe1f7;text-decoration:none;font-size:14px}nav a.active,nav a:hover{color:#fff;text-decoration:underline}
+main{max-width:1200px;margin:0 auto;padding:20px}h1{margin:.2em 0}h2{margin-top:1.8em;border-bottom:1px solid var(--line);padding-bottom:4px}
+.lead{color:var(--muted);font-size:16px}.disclaimer{background:var(--bg);border-left:4px solid var(--user);padding:8px 12px;font-size:13px;color:var(--muted)}
+footer{max-width:1200px;margin:24px auto;padding:12px 20px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:14px 0}
+.card{display:block;border:1px solid var(--line);border-radius:8px;padding:12px;color:var(--ink);text-decoration:none;background:#fff}
+.card:hover{border-color:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.08)}.card .k{font-size:12px;color:var(--muted)}.card .v{font-size:18px;font-weight:600;margin:4px 0}.card .tag{font-size:12px;color:var(--muted)}
+.tablewrap{overflow-x:auto;margin:10px 0}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--bg);position:sticky;top:0}table.proj td{text-align:right}table.proj td:first-child{text-align:left}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;background:#e6ecf5;color:var(--user);white-space:nowrap}
+.badge.ok{background:#e3f3e8;color:var(--ok)}.badge.warn{background:#fdeedc;color:var(--warn)}.badge.user{background:#e6ecf5;color:var(--user)}
+.flag{background:#fdeedc;color:var(--warn);padding:0 4px;border-radius:3px;text-decoration:none;font-weight:600}
+.warn{color:var(--warn)}.small{font-size:13px;color:var(--muted)}section.plan{background:var(--bg);border-radius:8px;padding:12px 18px}
+input.filter{margin:6px 0;padding:6px;width:280px;border:1px solid var(--line);border-radius:4px}

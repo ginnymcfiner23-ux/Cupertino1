@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard · Inheritance decision study</title>
+<link rel="stylesheet" href="assets/style.css"></head><body>
+<header><div class="brand">Inheritance decision study <span>2040–2050 trust scenario</span></div>
+<nav><a href="index.html" class=active>Dashboard</a><a href="property-data.html">Property data</a><a href="costs.html">Costs &amp; utilities</a><a href="tax-law.html">Tax &amp; law</a><a href="projections.html">Projections</a><a href="inheritance.html">Inheritance steps</a><a href="decision.html">Decision &amp; plan</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a></nav></header><main>
+<h1>Dashboard</h1><p class="lead">Inheritance decision study for two inherited properties (planned trust transfer, around 2040–2050). Updated 2026-11-06.</p>
+<p class="disclaimer">Not tax, legal, or investment advice. Projections are illustrative. Values marked <span class="badge user">USER-PROVIDED</span> are inputs not verified against an official source. Blank cells are unverified and flagged.</p><div class="cards"><a class="card" href="property-data.html"><div class="k">Property A est. market value (user)</div><div class="v">$3,100,000</div><div class="tag">USER-PROVIDED</div></a><a class="card" href="property-data.html"><div class="k">Property B est. market value (user)</div><div class="v">$1,800,000</div><div class="tag">USER-PROVIDED</div></a><a class="card" href="tax-law.html"><div class="k">Federal estate exclusion, 2026 (per person)</div><div class="v">$15,000,000</div><div class="tag">VERIFIED · IRS</div></a><a class="card" href="tax-law.html"><div class="k">Prop 19 parent-child value cap</div><div class="v">$1,044,586</div><div class="tag">VERIFIED · BOE</div></a><a class="card" href="tax-law.html"><div class="k">Prop 13 max assessed-value growth</div><div class="v">2% / yr</div><div class="tag">VERIFIED · BOE</div></a><a class="card" href="flagged.html"><div class="k">Flags open for review</div><div class="v">25</div><div class="tag">see page</div></a></div>
+<section><h2>Executive summary</h2>
+<ul>
+<li><strong>Federal estate tax is not the main issue for these two properties.</strong> The 2026 basic exclusion is $15,000,000 per person (IRS). The two properties total about $4,900,000 in user-estimated value, which leaves roughly $10,100,000 of headroom for other estate assets before debts, expenses, and prior gifts (see <a href="inheritance.html">Inheritance steps</a>).</li>
+<li><strong>California adds no inheritance or estate tax</strong> on these assets (research basis: secondary sources; official confirmation flagged, <a href="flagged.html#F-11">F-11</a>). Rental income and sale gains remain taxable.</li>
+<li><strong>Prop 19 is the largest cost driver.</strong> Inherited property keeps its old assessment only if a child moves in within one year. Otherwise it is reassessed to market. In the base case (inheritance 2045), Property A's first-year tax is about $66,173 if reassessed versus $52,225 if the child qualifies, against $7,207 today.</li>
+<li><strong>Property B's rental reassessment is steep.</strong> In the base case, its first-year tax is about $61,431 after reassessment, against $2,439 today (the rent-controlled units' treatment is flagged, <a href="flagged.html#F-17">F-17</a>).</li>
+<li><strong>Sell-and-invest beat both living in A and renting out B</strong> in the low, base, and high scenarios (see <a href="decision.html">Decision &amp; plan</a>). The gap is driven by the after-tax investment return assumption, which is labeled, not verified.</li>
+</ul></section>
+<section class="plan"><h2>Best plan (based on the model)</h2>
+<ol>
+<li><strong>Sell Property B soon after inheritance</strong> (base 2045: sell-and-invest ≈ $4,495,487 vs keep-as-rental ≈ $3,395,353 after 10 years). Reassessment alone makes the rent-controlled building costly to hold.</li>
+<li><strong>Sell Property A soon after inheritance</strong> unless a child will actually live there within a year and the housing value is worth more than the break-even avoided rent (base 2045: about $19,346/mo). No market rent was supplied, so that figure is a threshold, not a finding.</li>
+<li><strong>Keep the step-up:</strong> value both properties at date-of-death market value and keep the appraisal (IRS basis rules; <a href="flagged.html#F-06">F-06</a>).</li>
+<li><strong>Verify before acting:</strong> the flagged items on the <a href="flagged.html">Flagged for Review</a> page, especially market values, water provider, and the Prop 19 treatment of a multi-unit property.</li>
+</ol>
+<p class="small">Scenario labels: base = 2.5% inflation, 2.5% home growth, 6% nominal investment return; low and high are on the <a href="decision.html">decision page</a>. All are labeled assumptions.</p></section>
+
+<section><h2>Explore</h2><div class="cards">
+<a class="card" href="property-data.html"><div class="k">Data</div><div class="v">Property history</div><div class="tag">User-provided · checked</div></a>
+<a class="card" href="costs.html"><div class="k">Carrying costs</div><div class="v">Water · power · insurance</div><div class="tag">Official tariffs · user inputs</div></a>
+<a class="card" href="tax-law.html"><div class="k">Law</div><div class="v">Federal · CA · local</div><div class="tag">Official sources</div></a>
+<a class="card" href="projections.html"><div class="k">Projections</div><div class="v">2026–2050 by year</div><div class="tag">Labeled assumptions</div></a>
+<a class="card" href="inheritance.html"><div class="k">Process</div><div class="v">Step-by-step inheritance</div><div class="tag">With official links</div></a>
+<a class="card" href="decision.html"><div class="k">Decision</div><div class="v">Live · rent · sell</div><div class="tag">After-tax comparison</div></a>
+<a class="card" href="flagged.html"><div class="k">Review</div><div class="v">Flagged for Review</div><div class="tag">25 items</div></a>
+<a class="card" href="sources.html"><div class="k">Sources</div><div class="v">Register</div><div class="tag">Official vs secondary</div></a>
+</div></section></main><footer>Data as of 2026-11-06. Official sources are linked per row. Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>.
+Personal information is withheld. Placeholders: Property A (Cupertino), Property B (San Francisco).</footer>
+<script src="assets/app.js"></script></body></html>
