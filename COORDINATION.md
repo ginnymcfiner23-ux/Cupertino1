@@ -156,3 +156,25 @@
 - **Cross-session requests:** none open. Note for sessions re-running `tools/verify.py`:
   its privacy scan may flag owner figures under `docs/decision/` — those figures are
   owner-authorized per the brief (badged), same policy as the main `docs/` dashboard.
+
+### Session 6099c2f2 — deployment record (final)
+
+- **PR:** [#9](https://github.com/ginnymcfiner23-ux/Cupertino1/pull/9) — MERGED into `main`
+  2026-11-06T14:17:57Z, merge commit `fcb8344ef06a7913a2a3ed88beab4cb1a45dae08`
+  (`gh pr merge 9 --merge`, after resolving add/add conflicts against `origin/main` as
+  documented in this session's section above).
+- **Merge result:** clean; all other sessions' trees preserved — root anonymised site
+  (unchanged), `docs/` dashboard (unchanged except one added footer link to
+  `decision/index.html`), `research/`, `site/`, `data/`, `tools/`, `.github/workflows/pages.yml`.
+- **Pages:** workflow `Deploy dashboard to GitHub Pages` run `42232677136` → **success**;
+  `pages build and deployment` run `42232676074` → **success** (artifact path `docs`).
+- **Live URLs (both fetched and content-verified after deploy, 2026-11-06):**
+  - Main dashboard: https://ginnymcfiner23-ux.github.io/Cupertino1/
+  - This session's decision centre: https://ginnymcfiner23-ux.github.io/Cupertino1/decision/
+    (executive summary, 11 pages, per-row sources, 14 flags — verified rendered).
+- **Integration checks at merge time:** `python3 scripts/check_links.py` → 11 pages,
+  153 internal links, 40 external URLs, 0 errors. Cross-links verified live in both
+  directions (`docs/index.html` footer → `decision/index.html`; decision centre navfoot →
+  `../index.html`).
+- **Follow-up:** this record was pushed in a second small PR after the deploy verification;
+  flagged items (F-01…F-14) remain open and non-blocking by design.
