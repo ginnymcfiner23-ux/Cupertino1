@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision — Live In, Rent, or Sell the Cupertino Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <div class="inner">
+    <div class="brand">Cupertino1<span> · Decision</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="taxes.html">Taxes</a>
+      <a href="costs.html">Costs</a>
+      <a href="projections.html">Projections</a>
+      <a href="decision.html" class="active">Decision</a>
+      <a href="inheritance-process.html">Process</a>
+      <a href="thresholds.html">Thresholds</a>
+      <a href="law-changes.html">Law Changes</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container tight">
+  <h1>Decision Analysis: Live In, Rent, or Sell?</h1>
+  <p>The choice is evaluated at the modeled inheritance year (~2045), using projected values from the <a href="projections.html">Projections</a> page. The San Francisco home (primary residence + ~$85,800/year rental income) is the household's current housing and stays in the picture under every option.</p>
+
+  <h2>Option A — Sell the Cupertino home shortly after inheritance, reinvest the proceeds</h2>
+  <table>
+    <tr><th>Factor</th><th class="num">Estimate (2045 model)</th><th>Basis / status</th></tr>
+    <tr><td>Sale price (projected market value)</td><td class="num">$7,833,546</td><td class="src"><span class="tag u">Projection — unverified</span></td></tr>
+    <tr><td>Selling costs (~5%: commission, repairs, escrow)</td><td class="num">~$391,677</td><td class="src"><span class="tag u">Industry rule — unverified</span></td></tr>
+    <tr><td>Net proceeds</td><td class="num">~$7,441,868</td><td class="src"><span class="tag u">Model output</span></td></tr>
+    <tr><td>Capital gains tax</td><td class="num">~$0</td><td class="src">Stepped-up basis = date-of-death value (IRC §1014 / <a href="https://www.irs.gov/publications/p551" target="_blank" rel="noopener">IRS Pub 551</a>); sell near basis → little/no gain</td></tr>
+    <tr><td>Ongoing costs after sale</td><td class="num">$0</td><td class="src">No tax, insurance, water, electricity, maintenance on this home</td></tr>
+    <tr><td>Reinvestment income (4% withdrawal rule)</td><td class="num">~$297,675/year (~$24,806/month)</td><td class="src"><span class="tag u">Model output — not investment advice</span></td></tr>
+    <tr><td>Reinvestment income (7% total return, pre-tax)</td><td class="num">~$520,931/year</td><td class="src"><span class="tag u">Model output — not investment advice</span></td></tr>
+  </table>
+
+  <h2>Option B — Move into the Cupertino home as primary residence</h2>
+  <table>
+    <tr><th>Factor</th><th class="num">Estimate (2045 model)</th><th>Basis / status</th></tr>
+    <tr><td>Requirements</td><td>Move in within 1 year of transfer; file BOE-19-P within 3 years; file BOE-266 homeowner's exemption within 1 year</td><td class="src"><a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag v">verified rule</span></td></tr>
+    <tr><td>Property tax (Prop 19 partial exclusion)</td><td class="num">~$74,479/year (~$6,207/month)</td><td class="src">Projection: assessed $6,311,781 × 1.18% · <span class="tag u">unverified</span></td></tr>
+    <tr><td>Homeowners insurance</td><td class="num">Not quoted — likely materially above statewide average for a ~$7.8M home</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Water</td><td class="num">~$100–150/month (owner estimate)</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Electricity (solar)</td><td class="num">~$0; ~$10–20 credit possible (owner estimate)</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Maintenance &amp; repairs (~1% of value)</td><td class="num">~$78,335/year (rule of thumb)</td><td class="src"><span class="tag u">Unverified — see Costs</span></td></tr>
+    <tr><td>Trade-off on the SF home</td><td>Moving out ends its primary-residence status; the vacant 3rd unit could be rented (rent unverified); §121 home-sale exclusion ($250K/$500K) requires 2 of 5 years' use (<a href="https://www.irs.gov/publications/p523" target="_blank" rel="noopener">IRS Pub 523</a>)</td><td class="src"><span class="tag v">Verified rule</span> · rent <span class="tag u">unverified</span></td></tr>
+  </table>
+
+  <h2>Option C — Rent out the Cupertino home</h2>
+  <table>
+    <tr><th>Factor</th><th class="num">Estimate (2045 model)</th><th>Basis / status</th></tr>
+    <tr><td>Property tax (full reassessment — rentals get no Prop 19 exclusion)</td><td class="num">~$92,436/year (~$7,703/month)</td><td class="src">Projection · <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE — Prop 19</a> · <span class="tag u">unverified</span></td></tr>
+    <tr><td>Break-even rent (tax + est. insurance + est. maintenance, pre-income-tax)</td><td class="num">~$15,231/month</td><td class="src"><span class="tag u">Model output — unverified inputs</span></td></tr>
+    <tr><td>Achievable market rent</td><td class="blank">Not estimated — no reliable source located</td><td class="src"><span class="tag u">Unverified — leave blank, flagged</span></td></tr>
+    <tr><td>Rental income tax</td><td class="num">Rent taxed federally + by CA; depreciation recapture on sale</td><td class="src">General federal/CA income tax rules · <span class="tag u">not modeled</span></td></tr>
+  </table>
+
+  <h2>Side-by-side comparison (modeled, 2045)</h2>
+  <table>
+    <tr><th>Measure</th><th class="num">A — Sell &amp; reinvest</th><th class="num">B — Live in it</th><th class="num">C — Rent it out</th></tr>
+    <tr><td>Annual property tax</td><td class="num">$0</td><td class="num">~$74,479</td><td class="num">~$92,436</td></tr>
+    <tr><td>Insurance + water + electric + maintenance</td><td class="num">$0</td><td class="num">Not reliably estimated (~$150K+/yr possible)</td><td class="num">Not reliably estimated</td></tr>
+    <tr><td>Cash income produced</td><td class="num">~$297,675/yr at 4% withdrawal</td><td class="num">$0</td><td class="num">Rent unknown; break-even ~$182,771/yr</td></tr>
+    <tr><td>Capital gains on sale</td><td class="num">~$0 (stepped-up basis)</td><td class="num">Deferred; §121 exclusion possible if later sold as primary residence</td><td class="num">Deferred; depreciation recapture applies</td></tr>
+    <tr><td>Housing provided</td><td class="num">No (SF home remains)</td><td class="num">Yes — replaces SF home as primary residence</td><td class="num">No</td></tr>
+    <tr><td>Complexity</td><td class="num">Low — sell, invest, done</td><td class="num">High — move, file Prop 19 forms, carry ~$6K/mo taxes</td><td class="num">High — landlord, reassessment, tenant risk</td></tr>
+  </table>
+
+  <div class="card">
+    <h2>Recommendation</h2>
+    <p>Under current law and these projections, <strong>sell the Cupertino home shortly after inheritance and reinvest the proceeds</strong>, while keeping the San Francisco home as the primary residence with its rental income.</p>
+    <div class="badge-rec">RECOMMENDED: Sell &amp; reinvest — highest projected net income, lowest cost and complexity.</div>
+    <ul>
+      <li><strong>Why sell:</strong> Proposition 19 removes the old "keep the parents' low tax base" benefit for anyone who doesn't move in. Holding the Cupertino home means property taxes of roughly $6,200–7,700/month by 2045 (plus insurance and maintenance), while selling near date-of-death value triggers little or no capital gains tax (stepped-up basis) and puts ~$7.4M to work — roughly $24,800/month at a 4% withdrawal rate.</li>
+      <li><strong>Why not rent:</strong> Rentals receive no Prop 19 exclusion → full reassessment → ~$92,436/year taxes. Break-even rent is estimated at ~$15,200/month before income taxes, insurance, and maintenance; achievable rent was not verified and may not cover costs.</li>
+      <li><strong>Why not live in it (unless you want to):</strong> Only sensible if an heir actually wants to live in Cupertino and can carry ~$6,200/month in property taxes plus insurance and maintenance. It also ends the SF home's primary-residence status (though a 3rd rentable unit becomes available).</li>
+    </ul>
+  </div>
+
+  <div class="note warn">
+    <strong>Key uncertainties:</strong> future appreciation, tax law (Prop 19 repeal initiative for Nov 2026 ballot is pending; federal estate-tax rules could change), insurance cost for a multi-million-dollar home, achievable rent, and actual maintenance. Re-run this analysis with real figures at the time of inheritance. Not financial, legal, or tax advice.
+  </div>
+
+  <div class="footer">
+    Cupertino1 · Decision · Personal data anonymized · See <a href="sources.html">Sources</a> · <a href="flagged-for-review.html">Flagged for Review</a>
+  </div>
+</div>
+</body>
+</html>
