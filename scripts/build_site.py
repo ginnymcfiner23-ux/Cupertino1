@@ -95,7 +95,8 @@ def shell(title, body, prefix="", active=""):
   <div class="brand"><span class="logo">◆</span> Inheritance<br>Decision Center</div>
   <div class="privacy">🔒 Privacy: no names, addresses or account details are published. Figures are anonymized.</div>
   {"".join(nav_items)}
-  <div class="navfoot">Data verified 2026-11-06 · Session arena-6099c2f2</div>
+  <div class="navfoot">Data verified 2026-11-06 · Session arena-6099c2f2<br>
+  <a href="{prefix}../index.html">← Main dashboard (docs/)</a></div>
 </nav>
 <main class="content">
 {body}
