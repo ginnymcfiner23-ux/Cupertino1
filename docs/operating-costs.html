@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operating costs — Inheritance Decision Dashboard</title>
+<meta name="description" content="Water, sewer, stormwater, electricity, insurance and maintenance build-ups for both properties, with the rental economics of the San Francisco building.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="toc">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#cup">PROPERTY_CUPERTINO cost build-up</a></li>
+      <li><a href="#cup-total">PROPERTY_CUPERTINO total</a></li>
+      <li><a href="#sf">PROPERTY_SF cost build-up</a></li>
+      <li><a href="#sf-total">PROPERTY_SF total</a></li>
+      <li><a href="#sf-noi">Rental economics</a></li>
+      <li><a href="#insurance">Insurance</a></li>
+      <li><a href="#escalation">How the costs are escalated</a></li>
+    </ul>
+  </div>
+
+  <section id="cup">
+    <h2>PROPERTY_CUPERTINO &mdash; 2026 operating cost build-up</h2>
+    <div data-table="props.cupertino.costs"></div>
+  </section>
+
+  <section id="cup-total">
+    <h2>PROPERTY_CUPERTINO &mdash; total annual holding cost</h2>
+    <div data-table="dynamic:cost-cupertino"></div>
+    <div class="callout neutral">
+      <p>The Cupertino house is a single-family home with a <strong>flat</strong> sewer charge and a <strong>credit</strong> for electricity. The whole holding cost is dominated by maintenance and by the property tax &mdash; and the property tax line is the one that changes by tens of thousands of dollars if the trust does not preserve the assessed value.</p>
+    </div>
+  </section>
+
+  <section id="sf">
+    <h2>PROPERTY_SF &mdash; 2026 operating cost build-up</h2>
+    <div data-table="props.sf.costs"></div>
+  </section>
+
+  <section id="sf-total">
+    <h2>PROPERTY_SF &mdash; total annual holding cost</h2>
+    <div data-table="dynamic:cost-sf"></div>
+  </section>
+
+  <section id="sf-noi">
+    <h2>Rental economics &mdash; the property tax does the damage, not the operating costs</h2>
+    <div data-table="dynamic:sf-net"></div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card">
+        <h3>Net operating income</h3>
+        <div data-chart="chart:sf-noi"></div>
+        <p class="small muted">The green line assumes the assessed value survives. The dashed line is what happens if the building is reassessed to market value at the inheritance &mdash; the likely outcome, because a building with two tenancies is not the transferor&rsquo;s principal residence.</p>
+      </div>
+      <div class="card">
+        <h4>Reading the two lines</h4>
+        <p class="small">The operating costs of the building &mdash; water, sewer, stormwater, electricity, insurance, maintenance &mdash; are roughly <strong>$41,000</strong> a year in 2026 and they are almost entirely under the owner&rsquo;s control. The property tax swing of roughly <strong>$39,000</strong> a year is not under the owner&rsquo;s control at all: it is determined by a statute, a court and the drafting of a trust.</p>
+        <p class="small">That asymmetry is the argument for selling PROPERTY_SF after the inheritance if the base is not protected: the owner can control the operating costs and the sale costs, but not the reassessment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="insurance">
+    <h2>Insurance &mdash; the largest blank in the model</h2>
+    <div class="callout warning">
+      <h4>No address-specific premium is published by any official source</h4>
+      <p>There is no official or published price for a homeowners (HO-3) policy on PROPERTY_CUPERTINO or a landlord (DP-3) policy on PROPERTY_SF. Insurance premiums are set by the carrier, the risk, the deductible and the replacement cost, and they are not published anywhere. The official column on this site is therefore <strong>blank by rule</strong>, and the model carries an assumption band instead: <strong>$1,500&ndash;$5,000</strong> a year for the Cupertino house and <strong>$1,500&ndash;$4,000</strong> a year for the San Francisco building, with the owner&rsquo;s $1,500 estimate at the very bottom of both bands.</p>
+      <p>Two things make this more than a rounding error. First, the California FAIR Plan &mdash; the state&rsquo;s insurer of last resort &mdash; is the fallback if an admitted carrier declines, and its terms were also <strong>not confirmed from an official page</strong> during this build (flag F9). Second, a landlord policy and a homeowner policy are different products: the San Francisco building needs a landlord form (DP-3), which is priced differently from an HO-3.</p>
+      <p><strong>Action:</strong> obtain written quotes from at least two admitted carriers for each property, and ask each of them directly what they would do if they declined &mdash; and what the FAIR Plan would cost instead.</p>
+    </div>
+  </section>
+
+  <section id="escalation">
+    <h2>How the costs are escalated to 2050</h2>
+    <div data-table="assumptions"></div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
