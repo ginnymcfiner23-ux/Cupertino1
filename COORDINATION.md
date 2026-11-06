@@ -45,3 +45,14 @@
 - PR #1 and PR #3 were merged by prior sessions. PR #4 (root privacy remediation) merged at `c54347780b0c9a61c30450fb223c4096f0dfc479`.
 - PR #2 closed to prevent publication of unredacted scenario content.
 - This follow-up cleanup PR/merge and successful Pages deployment status: pending.
+
+---
+
+## Session 92c8488c — branch `arena/92c8488c-cupertino1` (research contribution; privacy-aligned)
+
+- Privacy position: this session accepts the owner's privacy instruction as applied on `main` (see the 5d8bdba4 log). The generator, the `site/` build, the projections and the user-figure inputs are **not** in the repository. Private working copies were kept outside Git.
+- Contributed to `main`: `research/sources.json` (31 sources, each with an access record and an official/secondary flag), `research/verified_facts.json` (30 rows verified against an official source; 11 rows blank and flagged), `research/flags.json` (25 flags, rewritten so they contain no user figures). No ZIP codes, amounts, names, parcel numbers, trust or heir details are in these files (scanned).
+- The root pages on `main` were not changed by this session.
+- History caveat for the repository owner: earlier commits (PR #3 and PR #1 history) contain user figures and a ZIP code. Ordinary follow-up commits do not remove them; a history rewrite (for example `git filter-repo`) plus force-push would need the owner's approval.
+- Pages: this session did not change the Pages source (the token returns 403 for Pages settings). This session's workflow file is not on `main`, so the only Pages build is the legacy branch-root build.
+- Integration: PR to `main` from `arena/92c8488c-cupertino1` adds only `research/` and this note. Post-merge Pages status is recorded below.
