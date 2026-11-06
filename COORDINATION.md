@@ -1,32 +1,40 @@
-# Coordination — Cupertino1 Inheritance Decision Project
+# Coordination board
 
-## Session
-- Session ID: `arena-cupertino1` (single session; this session owns all tasks below)
-- Branch: `arena/e5dba077-cupertino1` (fixed session branch; commit and push only to this branch)
+## Task status
 
-## Task board
+| Task | Status | Owner/session | Files in scope |
+|---|---|---|---|
+| Initial research and draft site (prior completed session; PR #1 merged to `main`) | done; integration audit identified a privacy issue | `arena/e5dba077-cupertino1` | `index.html`, `cupertino.html`, `san-francisco.html`, `inheritance-taxes.html`, `inheritance-process.html`, `projections.html`, `projections.json`, `flagged-review.html`, `site/assets/style.css`, `README.md` |
+| Privacy-preserving integration, line-by-line source review, and site rebuild | in progress | `arena/5d8bdba4-cupertino1` | all public landing/content pages, aliases, README, coordination board |
+| Verify production Pages deployment after correction | pending | `arena/5d8bdba4-cupertino1` | GitHub Pages status / `main` deployment |
 
-| ID | Task | Status | Owner | Files touched | Sources verified | Notes |
-|----|------|--------|-------|---------------|------------------|-------|
-| T1 | Repo review & coordination setup | done | arena-cupertino1 | COORDINATION.md, README.md | n/a | Repo was empty except README.md |
-| T2 | Research: federal estate/gift tax & step-up in basis (IRS) | done | arena-cupertino1 | site/inheritance-taxes.md | irs.gov estate-tax page (2026 threshold $15,000,000; Form 706; portability); IRS Pub 551/559 (step-up basis, IRC §1014); Pub. L. 119-21 §70106 | Complete |
-| T3 | Research: CA inheritance/estate tax, Prop 13, Prop 19 parent-child reassessment | done | arena-cupertino1 | site/inheritance-taxes.md, site/cupertino.md | ftb.ca.gov (gifts/inheritance not income); boe.ca.gov/prop19 + BOE LTA 2026/026; sccassessor.org 2026 booklet; CA Constitution art. XIII A; RTC 51/110.1/13301 | Complete |
-| T4 | Research: Santa Clara County / Cupertino property tax & assessments | done | arena-cupertino1 | site/cupertino.md | sccassessor.org 2026 booklet (Prop 13 mechanics, supplemental assessment, PCOR, inheritance reassessed at date of death); composite residential rate ~1.08–1.30% | Complete |
-| T5 | Research: San Francisco property tax & assessments | done | arena-cupertino1 | site/san-francisco.md | sfassessor.org (NAV/roll); SF combined rate 1.1763% FY24-25 (SF Controller) | Complete |
-| T6 | Research: homeowners insurance rates CA (CDI) | done | arena-cupertino1 | site/cupertino.md, site/san-francisco.md | insurance.ca.gov CDI data call 2025: $2,339.99 statewide avg (6,052,334 policies); NAIC 2023 CA HO-3 $1,655. ZIP-specific quotes not published by CDI → flagged unverified | Complete |
-| T7 | Research: water & electricity (SJWC, Valley Water, PG&E NEM 3.0) | done | arena-cupertino1 | site/cupertino.md | sjwater.com AL 628 (CPUC D.24-12-077): 2026 rates, avg residential bill ~$137–145/mo; CPUC NEM 3.0 D.22-12-016 (eff. 4/15/2023); PG&E Solar Billing Plan, Base Services Charge ~$24/mo | Complete |
-| T8 | Research: SF water/electric (SFPUC) | done | arena-cupertino1 | site/san-francisco.md | sfpuc.gov Prop 218 notice: avg single-family combined bill ~$171/mo → $189 from 7/1/2026 (+10.5%), ~$212 by July 2027 | Complete |
-| T9 | Build projections: property value, tax, insurance, water, electric by year | done | arena-cupertino1 | site/projections.md | n/a — all projection inputs labeled assumptions; no official source for future appreciation | Complete |
-| T10 | Step-by-step inheritance process (CA trust administration) | done | arena-cupertino1 | site/inheritance-process.md | Cal. Prob. Code §16061.7 (60-day notice, 120-day contest), BOE forms BOE-19-P/BOE-266, county recorder PCOR, sccassessor.org booklet | Complete |
-| T11 | Executive summary | done | arena-cupertino1 | README.md, site/index.html | n/a | Complete |
-| T12 | Site build: landing page + category subpages, tables with source links | done | arena-cupertino1 | index.html, cupertino.html, san-francisco.html, inheritance-taxes.html, inheritance-process.html, projections.html, flagged-review.html, site/assets/style.css | n/a | Complete |
-| T13 | Verification: every table row has official source link or is flagged unverified; broken-link check | done | arena-cupertino1 | site/flagged-review.md | All internal links verified (scripted check: 0 missing files). External links are well-formed HTTPS to verified domains (irs.gov, ftb.ca.gov, boe.ca.gov, sccassessor.org, sfassessor.org, sfpuc.gov, sjwater.com, pge.com, insurance.ca.gov, congress.gov, courts.ca.gov, leginfo.legislature.ca.gov) | Complete |
-| T14 | GitHub Pages enablement, deploy check | in progress | arena-cupertino1 | repo settings via gh | Pages already enabled on repo, serving from branch `main` at https://ginnymcfiner23-ux.github.io/Cupertino1/ (status: built). Cannot repoint source branch via API (token lacks Pages write: 403). Will deploy after merging integration branch into main. | In progress |
-| T15 | Pull request to main, merge, confirm Pages deploy, record PR link | unclaimed | arena-cupertino1 | n/a | Pending | Final integration |
+## Session and branch constraints
 
-## Rules followed
-- One session per task; no task is started while another session claims it (single session here).
-- Small, frequent commits; `git pull --rebase` before every push.
-- Every table row cites an official source link, or the cell is left blank and flagged "unverified" on the Flagged for Review page.
-- No inferred or hallucinated values; projections are labeled assumptions, never presented as verified facts.
-- Personal information is anonymized with placeholders; nothing personal appears on the site.
+- This checkout is fixed to `arena/5d8bdba4-cupertino1`. Arena policy forbids creating or pushing a separate session/integration branch. Work and pushes remain on the fixed branch.
+- No active parallel claims were visible when work began. The first review found only a minimal README and no board; after `git pull --rebase origin main`, upstream `main` had advanced with a complete prior-session merge (PR #1). The rebase produced add/add conflicts in shared outputs. No conflict was skipped; shared pages are being reconciled with the privacy requirement and the prior pages are retained as safe compatibility routes.
+
+## Verification, sources, and privacy
+
+- Official source families consulted and linked inline: IRS estate-tax FAQ and Form 706/709 instructions; IRS Publications 523, 527, 551, and 559; California BOE Proposition 19 fact sheet and 2025 adjustment notice; California tax agency / Legislative Analyst; Santa Clara County Assessor; San Francisco Assessor-Recorder, Treasurer, Planning, and Rent Board; California Department of Insurance; California Courts; city utilities; and SEC Investor.gov.
+- Source-checked legal anchors include the 2026 federal estate basic exclusion, the IRS-published 2027 exclusion, 2026 annual gift exclusion, current Prop 19 parent-child home conditions and 2025–2027 adjustment, Prop 13 assessment rules, SF FY 2025–26 tax rate, inherited-property basis, rental reporting, and SF owner-move-in restrictions. All future-law and future-market values are left blank rather than extrapolated.
+- Each data row in the current HTML tables carries an official-source link. User-supplied property-specific values are explicitly unverified and masked; no ZIP codes, exact private amounts, APNs, street addresses, names, leases, trust documents, account details, or tax returns appear in the current public source files.
+- No parcel identifiers were supplied for official-record matching. The California DOI source is aggregate historical insurance experience rather than an individual quote; insurance premiums remain blank.
+- HTML verification: `html-validate@10.5.0` passed all five main pages; scripted internal-link / anchor checks and table source-link checks passed; a scan for supplied exact amounts and ZIP codes passed; `git diff --check` passed. Plain static HTML/CSS; no build step.
+
+## Incident / conflict log
+
+- 2026-11-06 — Upstream had merged PR #1 from the prior session before this session’s integration rebase. Reviewing the merged public pages showed exact property-specific financial amounts and ZIP/location details in the site and supporting data/README. This conflicts with the user’s highest-priority instruction that personal information must not appear on the website.
+- 2026-11-06 — GitHub Pages API reported the repository is public, served from `main` at the root using legacy Pages deployment; a Pages deployment was in progress during the audit. The previous deployment may therefore already have exposed those details. This remediation masks/removes them from the current published files and replaces old page URLs with safe links to anonymized pages. The prior merged Git commit still contains the original content in repository history; ordinary follow-up commits do not erase that history. This requires repository-owner action to purge historical versions if complete removal is required.
+- 2026-11-06 — Rebase conflict was not skipped. Resolution keeps the prior page routes as privacy-safe aliases and consolidates verified public-law analysis in the new summary, property/cost framework, tax-law, inheritance, and flagged-review pages. Old projection payload is replaced with a null/withheld schema; the unsafe Pages workflow was removed because Pages is already configured for legacy `main` deployment.
+
+## Irregularities and limitations
+
+- User-supplied values could not be independently verified because property identifiers and documents were not available; they are intentionally withheld from the public site.
+- No defensible personalized “best” choice or numeric 2040–2050 projection is possible without trust/title, occupancy, parcel assessment, bills, leases, appraisals, insurance quotes, expenses, and future statutory rules. These gaps are clearly listed on the public Flagged for Review page.
+- Prior-session projections were assumptions rather than official forecasts and are not carried forward as fact. Statutory figures are current-year facts only; no future threshold or property appreciation is claimed.
+
+## Deployment record
+
+- Existing Pages URL (as reported by GitHub): `https://ginnymcfiner23-ux.github.io/Cupertino1/`.
+- Prior PR #1 was already merged by a prior session; this session did not merge or alter its history.
+- Current remediation PR / merge / post-remediation Pages result: pending.
