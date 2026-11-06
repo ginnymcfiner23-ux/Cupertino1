@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources — Inheritance Decision Dashboard</title>
+<meta name="description" content="Every official source used in the inheritance decision dashboard, with the publisher, the access date and what each source was used for.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <section id="method">
+    <h2>How sources are used</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>The rule</h3>
+        <p class="small">Every published figure is either (a) taken from an official source listed below, (b) derived arithmetically from official figures, (c) supplied by the owner and labelled as such, or (d) left blank and flagged. Every table cell that carries a value shows a <span class="src-link">source</span> chip that links to the official document it came from.</p>
+      </div>
+      <div class="card">
+        <h3>What counts as official</h3>
+        <p class="small">Statutes and legislative text from the California Legislature (leginfo); state agency publications from the IRS, the Franchise Tax Board, the Board of Equalization, the Department of Insurance and the State Board of Equalization; county and city government publications from Santa Clara County and the City and County of San Francisco; and published utility rate schedules filed with the California Public Utilities Commission.</p>
+      </div>
+      <div class="card">
+        <h3>What does not</h3>
+        <p class="small">News articles, law-firm commentary, insurance-industry blogs and market data aggregators were used during research to <em>find</em> official sources, but they are not cited as the authority for any published number. Where only a secondary source could be found for a figure, the figure is published as unverified and flagged rather than presented as fact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="list">
+    <h2>All sources <span class="h2-note">every one opened and read during the build</span></h2>
+    <div data-sources></div>
+  </section>
+
+  <section id="notes">
+    <h2>Research notes worth keeping</h2>
+    <div class="callout neutral">
+      <ul class="small">
+        <li><strong>There is no Cupertino Water District.</strong> The city&rsquo;s own bulletin confirms three separate water systems in Cupertino: the City-owned Cupertino Water System (leased to San Jose Water Company), California Water Service in the north-east, and San Jose Water Company in the south-east. The tariff used on the operating-costs page is the San Jose Water Company CPUC General Metered Service schedule, whose territory includes &ldquo;portions of Cupertino&rdquo;.</li>
+        <li><strong>The Santa Clara County Tax Rate Book is large</strong> &mdash; 816 tax rate areas across Sections I and III. The Cupertino parcel&rsquo;s own TRA total was not located in the extraction, so the base case uses the County Assessor&rsquo;s published &ldquo;typical Tax Rate Area&rdquo; total of $1.1488 per $100, with the observed book range carried as a sensitivity band (flag F5).</li>
+        <li><strong>Two published sources disagree about the San Francisco top transfer-tax tiers</strong> &mdash; the current city page and the Assessor-Recorder page both show $27.50 and $30.00 per $500 (5.50% and 6.00%), while a 2020 voter digest shows the pre-2020 figures. The current figures are used, and the pending BUILD Act is tracked on the tax thresholds page.</li>
+        <li><strong>Rev. Proc. 2025-32 is the single most efficient federal source.</strong> One document supplies the 2026 basic exclusion ($15,000,000), the annual gift exclusion ($19,000), the 2026 ordinary and capital-gain rate tables and the 2026 excess business loss threshold.</li>
+        <li><strong>Leginfo renders an empty Code Text body for repealed sections.</strong> R&amp;T &sect;&sect;13311 and 13312 render empty; R&amp;T &sect;13301 &mdash; the actual prohibition &mdash; renders in full and is the citation used.</li>
+        <li><strong>The Santa Clara County Assessor booklet is the cleanest official statement of Prop 13 mechanics available</strong>, and it settles the question of when inheritance is reassessed: as of the date of death, not the date of distribution, and in the name of the estate even if the property is sold rather than distributed.</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

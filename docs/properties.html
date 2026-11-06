@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Properties — Inheritance Decision Dashboard</title>
+<meta name="description" content="Core facts, owner-supplied tax and assessment history, and official property tax rates for the two inherited properties.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="toc">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#snapshot">Side-by-side snapshot</a></li>
+      <li><a href="#cup">PROPERTY_CUPERTINO &mdash; facts</a></li>
+      <li><a href="#cup-hist">PROPERTY_CUPERTINO &mdash; owner tax and assessment history</a></li>
+      <li><a href="#cup-rec">PROPERTY_CUPERTINO &mdash; reconciliation</a></li>
+      <li><a href="#sf">PROPERTY_SF &mdash; facts</a></li>
+      <li><a href="#sf-hist">PROPERTY_SF &mdash; owner tax and assessment history</a></li>
+      <li><a href="#sf-rec">PROPERTY_SF &mdash; reconciliation</a></li>
+      <li><a href="#rules">The two rules that govern everything</a></li>
+    </ul>
+  </div>
+
+  <section id="snapshot">
+    <h2>Side-by-side snapshot <span class="h2-note">November 2026</span></h2>
+    <div data-table="snapshot"></div>
+  </section>
+
+  <section id="cup">
+    <h2>PROPERTY_CUPERTINO <span class="h2-note">ZIP 95014 &middot; single-family house</span></h2>
+    <div data-table="props.cupertino.facts"></div>
+  </section>
+
+  <section id="cup-hist">
+    <h2>PROPERTY_CUPERTINO &mdash; owner-supplied tax and assessment history, 2026&ndash;2014</h2>
+    <div class="callout warning">
+      <h4>Read this before using the table</h4>
+      <p>These are the owner&rsquo;s own figures, not verified. The owner&rsquo;s source spreadsheet was not available when this site was built, so the dollar cells that could not be recovered are <strong>left blank rather than inferred</strong> &mdash; that is the project rule, and inventing a value would be worse than showing none. What was recovered from the owner&rsquo;s data (the implied effective rate, the offset growth column, the zero-growth year) is set out in the reconciliation table immediately below, and the whole picture is written up on the <a href="flagged.html">Flagged for review</a> page as flag F16.</p>
+    </div>
+    <div data-table="props.cupertino.ownerHistory"></div>
+  </section>
+
+  <section id="cup-rec">
+    <h2>PROPERTY_CUPERTINO &mdash; what the owner&rsquo;s data does and does not reconcile to</h2>
+    <div data-table="props.cupertino.ownerDerived"></div>
+  </section>
+
+  <section id="sf">
+    <h2>PROPERTY_SF <span class="h2-note">ZIP 94122 &middot; three-unit residential building</span></h2>
+    <div data-table="props.sf.facts"></div>
+  </section>
+
+  <section id="sf-hist">
+    <h2>PROPERTY_SF &mdash; owner-supplied tax and assessment history, 2025&ndash;2016</h2>
+    <div class="callout warning">
+      <h4>Read this before using the table</h4>
+      <p>The 2025 assessment of <strong>$114,248</strong> and the 2025 tax of <strong>$2,439</strong> are the owner&rsquo;s own recorded figures. The rest of the assessment column is <strong>derived</strong>, not owner-verbatim: it is the 2016 base year escalated at exactly 2% a year (the Prop&nbsp;13 cap) to the recorded 2025 endpoint. The working log recorded the 2016 base as $96,557, which does not reconcile to $114,248 at 2% a year &mdash; the implied base is $95,597. The owner&rsquo;s tax column for the other years could not be recovered and is left blank (flag F16).</p>
+    </div>
+    <div data-table="props.sf.ownerHistory"></div>
+  </section>
+
+  <section id="sf-rec">
+    <h2>PROPERTY_SF &mdash; what the owner&rsquo;s data does and does not reconcile to</h2>
+    <div data-table="props.sf.ownerDerived"></div>
+  </section>
+
+  <section id="rules">
+    <h2>The two rules that govern everything</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>1. The base year value only moves at 2% a year</h3>
+        <p>&ldquo;Except for changes in ownership or new construction, the base year value increase is limited to 2% per year (or less if the California Consumer Price Index is below 2%).&rdquo; That is why an owner-held property keeps a small, predictable tax bill no matter how much the market moves.</p>
+        <p class="small muted">Santa Clara County Office of the Assessor, <em>Assessment Information for the Santa Clara County Property Owner (2026)</em>.</p>
+      </div>
+      <div class="card">
+        <h3>2. A change of ownership resets the base year to market value</h3>
+        <p>&ldquo;A new base year value is set by reassessment whenever there is a change in ownership or new construction.&rdquo; And: &ldquo;The reassessment of property acquired by inheritance from an estate or living trust occurs as of the date of the death of the former owner, not on the date of distribution to the beneficiary.&rdquo;</p>
+        <p class="small muted">Same source. This is the rule the whole plan is designed around &mdash; see the <a href="inheritance-taxes.html">tax thresholds</a> page for the exceptions.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

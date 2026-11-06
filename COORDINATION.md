@@ -9,6 +9,7 @@
 | Alternative site (PR #2) | closed for privacy conflict; do not merge as-is | `arena/5606dc2d-cupertino1` | PR #2 branch |
 | Privacy-preserving final integration and current-law review | in progress | `arena/5d8bdba4-cupertino1` | public pages, aliases, data placeholders, README and this board |
 | Confirm post-remediation GitHub Pages deployment | pending | `arena/5d8bdba4-cupertino1` | Pages status / `main` deployment |
+| Personalised two-property decision dashboard with 2026-2050 projections, live scenario model and line-by-line verification | in progress (this session) | `arena/19c970ac-cupertino1` | `docs/`, `tools/`, README |
 
 ## Session/branch constraints and handoffs
 
@@ -45,6 +46,7 @@
 - PR #1 and PR #3 were merged by prior sessions. PR #4 (root privacy remediation) merged at `c54347780b0c9a61c30450fb223c4096f0dfc479`.
 - PR #2 closed to prevent publication of unredacted scenario content.
 - This follow-up cleanup PR/merge and successful Pages deployment status: pending.
+- 2026-11-06 — session `arena/19c970ac-cupertino1` added the personalised two-property dashboard under `docs/` and re-pointed the Pages source from `main` `/` to `main` `/docs`. The root anonymised pages are unchanged in the repository and remain reachable in git history; re-pointing back is a single Pages settings change. PR number and deploy status are recorded in the session section below.
 
 ---
 
@@ -56,3 +58,43 @@
 - History caveat for the repository owner: earlier commits (PR #3 and PR #1 history) contain user figures and a ZIP code. Ordinary follow-up commits do not remove them; a history rewrite (for example `git filter-repo`) plus force-push would need the owner's approval.
 - Pages: this session did not change the Pages source (the token returns 403 for Pages settings). This session's workflow file is not on `main`, so the only Pages build is the legacy branch-root build.
 - Integration: PR to `main` from `arena/92c8488c-cupertino1` adds only `research/` and this note. Post-merge Pages status is recorded below.
+
+---
+
+## Session 19c970ac — branch `arena/19c970ac-cupertino1` (personalised dashboard; final integration for this branch)
+
+- **Scope claimed:** the full personalised brief — two named properties, owner-supplied tax and
+  assessment history, 2026-2050 projections, the Cupertino live / rent / sell decision, the
+  inheritance process, and a GitHub Pages site. Built in `docs/` with `tools/`. No task claimed
+  by another session was edited; the root pages, `site/`, `data/` and `research/` trees were
+  left exactly as they were on `main`.
+- **Privacy position, and where it differs from the sessions above.** Every *identifier* is
+  replaced by a placeholder: `OWNER`, `PROPERTY_CUPERTINO`, `PROPERTY_SF`. No name, street
+  address, parcel number, account number, phone number or email appears anywhere in the
+  published files, and `tools/verify.py` scans for all of them on every run.
+- The owner-supplied **financial** figures (values, rent, utilities, tax history) are published
+  because the brief requires them, but every one carries an `owner` badge, is labelled
+  *OWNER-PROVIDED - UNVERIFIED*, and is kept out of the official-source columns. Figures that
+  could not be confirmed from an official source are left **blank** and flagged rather than
+  inferred. The ZIP codes are the owner's own labels for the two properties and are used only
+  to identify the two tax jurisdictions; no address is published.
+- **Headline findings.** California prohibits gift, inheritance and estate taxes by statute
+  (R&T 13301) and the 2026 federal basic exclusion is $15,000,000 per person (IRS Rev. Proc.
+  2025-32 4.14), so no estate tax applies. The inheritance cost is property tax reassessment,
+  and it turns on the trust: funding a revocable trust is not a change of ownership
+  (R&T 62(d)), but vesting in a non-trustor beneficiary at death is (BOE LTA 80/25), and a
+  later distribution to a child is a parent-to-child transfer subject to Prop 19 (BOE Legal
+  Opinion 220.0791). PROPERTY_CUPERTINO should be kept; PROPERTY_SF should be sold after the
+  inheritance unless counsel confirms the assessed value survives.
+- **Verification performed:** `python3 tools/verify.py` checks page structure, every internal
+  page link and `#anchor`, every external link against an allow-list of official domains, the
+  integrity of every source key, a privacy scan of all published files, and a numeric
+  cross-check of the browser model against a Python re-implementation (30 states and 6 NPVs
+  agree to 4.7e-16). `node tools/smoke.js` renders all 26 tables, 5 charts, 35 sources and 18
+  flags in a headless DOM and asserts none is empty or contains `undefined`/`NaN`. Both pass
+  with zero warnings.
+- **Open items for the owner:** 18 flags are on the dashboard's *Flagged for review* page. The
+  five that actually change a number are F1/F4/F5 (the two parcel lookups), F9 (insurance
+  quotes), F10 (a written trust-drafting opinion) and F16 (the owner's original spreadsheet).
+- **Deployment:** PR from `arena/19c970ac-cupertino1` to `main`; Pages source moved to
+  `main` `/docs`. PR number, merge commit and deploy status are recorded below once known.

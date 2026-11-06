@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inheritance process — Inheritance Decision Dashboard</title>
+<meta name="description" content="Step-by-step inheritance process for two California properties: lifetime trust planning, the date of death, and the years that follow.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="toc">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#decision-tree">The trust decision tree</a></li>
+      <li><a href="#steps">Step-by-step process</a></li>
+      <li><a href="#calendar">The annual calendar</a></li>
+      <li><a href="#deadlines">Deadline table</a></li>
+    </ul>
+  </div>
+
+  <section id="decision-tree">
+    <h2>The trust decision tree</h2>
+    <div class="callout action">
+      <h4>One question decides the plan</h4>
+      <p><strong>If the trust is drafted so that no interest in the real property vests in the beneficiaries at the owner&rsquo;s death, does the Santa Clara County assessed value survive?</strong></p>
+      <p>The answer changes roughly <strong>$44,000&ndash;$59,000 a year</strong> on PROPERTY_CUPERTINO and roughly <strong>$39,000 a year</strong> on PROPERTY_SF. Everything else on this site is downstream of that answer, and it is a question for a California estate-planning attorney, not for a spreadsheet. Get it answered in writing before funding anything.</p>
+    </div>
+    <div class="grid cols-2">
+      <div class="card">
+        <h4>If the answer is YES</h4>
+        <ul class="small">
+          <li><strong>PROPERTY_CUPERTINO</strong> &mdash; keep it. Live in it or rent it. The property tax stays near $9,000&ndash;$10,000 a year in 2045 on a $6 million asset.</li>
+          <li><strong>PROPERTY_SF</strong> &mdash; hold and rent it. Net operating income of roughly $50,000 a year on a $3.5 million asset is a strong, tax-efficient position.</li>
+          <li>Prop&nbsp;19 becomes a <em>bonus</em> rather than a necessity, so the heirs are not forced into the 1-year occupancy and 3-year claim deadlines.</li>
+          <li>The &sect;1014 basis step-up still applies because the properties sit inside the decedent&rsquo;s revocable trust and are therefore in the gross estate.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>If the answer is NO</h4>
+        <ul class="small">
+          <li><strong>PROPERTY_SF</strong> &mdash; sell it after the inheritance. Reassessed to market value it costs roughly $39,000 a year in extra tax and the building&rsquo;s yield collapses. Selling after death still gets the &sect;1014 step-up, so the taxable gain is only the appreciation since death.</li>
+          <li><strong>PROPERTY_CUPERTINO</strong> &mdash; live in it and claim Prop&nbsp;19, which at least caps part of the reassessment; or sell it if the Prop&nbsp;19 claim is not worth the 1-year occupancy obligation.</li>
+          <li>Alternatively, sell PROPERTY_SF during the owner&rsquo;s lifetime, which avoids reassessment entirely &mdash; but that cannot be quantified until the original purchase basis is supplied (flag F12).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps">
+    <h2>Step-by-step process</h2>
+    <p class="lede">Ordered by when the action has to happen. The Phase&nbsp;A steps are the ones that create value; the Phase&nbsp;B steps are largely mechanical once the planning is right.</p>
+    <div data-process></div>
+  </section>
+
+  <section id="calendar">
+    <h2>The annual calendar</h2>
+    <div class="table-scroll">
+      <table class="compact">
+        <thead><tr><th>Date</th><th>What happens</th><th>Which property</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>1 January</td><td>Lien date for the assessment roll (12:01 a.m.).</td><td>Both</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>15 February</td><td>Legal deadline to file claims for the Homeowners&rsquo; Exemption, Disabled Veteran Exemption and other exemptions.</td><td>PROPERTY_CUPERTINO</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>10 April</td><td>Second instalment of secured property taxes due without penalty.</td><td>Both</td><td><a class="src-link" href="https://sftreasurer.org/property/secured-property-taxes" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>1 July</td><td>Assessment roll delivered to the County Controller-Treasurer.</td><td>PROPERTY_CUPERTINO</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>2 July &ndash; 15 September</td><td>Assessment Appeal application filing period with the Clerk of the Board. Informal review can be requested 1 July to 1 August.</td><td>PROPERTY_CUPERTINO</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>31 August</td><td>Last day to pay unsecured taxes without penalty.</td><td>Both</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>October</td><td>Property tax bills are mailed; two instalments follow.</td><td>Both</td><td><a class="src-link" href="https://sftreasurer.org/property/secured-property-taxes" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>10 December</td><td>First instalment of secured property taxes due without penalty; also the deadline for a late Homeowners&rsquo; or Veterans&rsquo; Exemption application.</td><td>Both</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>16 February (every 2 years)</td><td>BOE adjusts the Prop&nbsp;19 allowance for inflation. Next adjustment after 2025-02-16 ($1,044,586 for transfers to 2027-02-15).</td><td>PROPERTY_CUPERTINO</td><td><a class="src-link" href="https://www.boe.ca.gov/pdf/pub801.pdf" target="_blank" rel="noopener">source</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="deadlines">
+    <h2>Deadlines that run from the inheritance</h2>
+    <div class="table-scroll">
+      <table class="compact">
+        <thead><tr><th>Deadline</th><th>Length</th><th>What it applies to</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Occupy as a principal residence</td><td>Within 1 year of the transfer</td><td>Required for the Prop&nbsp;19 exclusion on PROPERTY_CUPERTINO.</td><td><a class="src-link" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=63.2" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>File the Homeowners&rsquo; or Disabled Veterans&rsquo; Exemption</td><td>Within 1 year of the transfer</td><td>Required for the Prop&nbsp;19 exclusion on PROPERTY_CUPERTINO.</td><td><a class="src-link" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=63.2" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>File the Prop&nbsp;19 claim (BOE-19-P, with BOE-266)</td><td>Within 3 years of the transfer, or before the property goes to a third party or the transferee stops occupying it &mdash; whichever is earlier</td><td>PROPERTY_CUPERTINO, if a Prop&nbsp;19 exclusion is claimed.</td><td><a class="src-link" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=63.2" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>Appeal a supplemental assessment</td><td>Within 60 days of the notice</td><td>Both &mdash; the supplemental bill issued on the change of ownership.</td><td><a class="src-link" href="https://files.santaclaracounty.gov/exjcpb1521/2026-04/assessment-information-2026-booklet-english-3-23-26-web.pdf" target="_blank" rel="noopener">source</a></td></tr>
+          <tr><td>File Form 706</td><td>Within 9 months of the date of death</td><td>Only if the estate exceeds $15,000,000, or to preserve the exclusion for a surviving spouse. Not expected here.</td><td><a class="src-link" href="https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax" target="_blank" rel="noopener">source</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

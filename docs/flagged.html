@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for review — Inheritance Decision Dashboard</title>
+<meta name="description" content="Every irregularity, unverified value and open legal question in the inheritance decision dashboard, with the action required for each.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <section id="intro">
+    <h2>Flagged for review <span class="h2-note">eighteen open items &middot; none block the build, all need a human</span></h2>
+    <p class="lede">Nothing on this site is asserted without a source. Where a figure could not be confirmed from an official source it is <strong>left blank</strong> and listed here, rather than inferred. This page is the working list: each item states what was found, why it matters, and the single action that closes it. Items marked <span class="badge unverified">high</span> change a number on the site; the rest are housekeeping.</p>
+    <div class="callout warning">
+      <h4>Two things only the owner can fix</h4>
+      <ul>
+        <li><strong>F16 &mdash; the original spreadsheet.</strong> The year-by-year tax and assessment tables for both properties were not available when this site was built, so most of those cells are blank. Supplying the two dollar columns for 2026&ndash;2014 (Cupertino) and 2025&ndash;2016 (San Francisco) restores them verbatim.</li>
+        <li><strong>F12 &mdash; the original purchase basis.</strong> Without the purchase price and purchase date for each property, the decision to sell during the owner&rsquo;s lifetime (which avoids reassessment entirely) cannot be quantified against the decision to keep and reassess.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="list">
+    <h2>The list</h2>
+    <div data-flags></div>
+  </section>
+
+  <section id="method">
+    <h2>How these were found</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Cross-checking owner data</h3>
+        <p class="small">Every owner-supplied tax and assessment figure was divided by the matching official rate to get an implied rate, and compared with the published rate for the relevant county and fiscal year. Three of the four discrepancies on this page were found that way (F1, F4, F5).</p>
+      </div>
+      <div class="card">
+        <h3>Re-deriving published rates</h3>
+        <p class="small">The Cupertino and San Francisco bills were rebuilt from the published rate schedules &mdash; the San Jose Water Company CPUC tariff, the SFPUC FY2026-27 water and sewer schedules, the Cupertino Sanitary District rate &mdash; and the totals compared with the owner&rsquo;s observed bills. That is how F6, F7, F7b and F16b surfaced.</p>
+      </div>
+      <div class="card">
+        <h3>Reading the statute</h3>
+        <p class="small">The trust question was traced from Revenue and Taxation Code &sect;62(d) through BOE Legal Letter Advice 80/25 and BOE Legal Opinion 220.0791, and cross-checked against the Santa Clara County Assessor&rsquo;s own statement that inheritance from a living trust is reassessed as of the date of death (F10).</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

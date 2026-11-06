@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property tax — Inheritance Decision Dashboard</title>
+<meta name="description" content="Property tax rates, Prop 13 mechanics, reassessment scenarios and year-by-year property tax projections for both properties.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1>Inheritance Decision Dashboard</h1>
+    <p class="tagline">Two properties, one trust decision, and a 2040&ndash;2050 timeline: what each property costs to hold, what it costs to transfer, and which choice wins.</p>
+    <div class="meta-line">
+      <span>Data as of 6 November 2026</span>
+      <span>Horizon 2026&ndash;2050</span>
+      <span>Every figure traced to an official source or flagged</span>
+      <span>No personal information published</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html">Executive summary</a>
+    <a href="properties.html">Properties</a>
+    <a href="property-tax.html">Property tax</a>
+    <a href="operating-costs.html">Operating costs</a>
+    <a href="inheritance-process.html">Inheritance process</a>
+    <a href="inheritance-taxes.html">Tax thresholds</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="flagged.html">Flagged for review</a>
+    <a href="sources.html">Sources</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="toc">
+    <h4>On this page</h4>
+    <ul>
+      <li><a href="#mechanics">How California property tax works</a></li>
+      <li><a href="#reassess">Reassessment at the inheritance</a></li>
+      <li><a href="#cup-rate">PROPERTY_CUPERTINO rate build-up</a></li>
+      <li><a href="#sf-rate">PROPERTY_SF rate</a></li>
+      <li><a href="#charts">The tax drag, drawn out</a></li>
+      <li><a href="#proj-cup">PROPERTY_CUPERTINO projections</a></li>
+      <li><a href="#proj-sf">PROPERTY_SF projections</a></li>
+    </ul>
+  </div>
+
+  <section id="mechanics">
+    <h2>How California property tax works</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>The 1% cap</h3>
+        <p>&ldquo;The maximum amount of property tax cannot exceed 1% of a property&rsquo;s taxable value, plus bonds approved by the voters, service fees, improvement bonds, and special assessments.&rdquo;</p>
+        <p class="small muted">Santa Clara County Office of the Assessor, 2026 owner booklet.</p>
+      </div>
+      <div class="card">
+        <h3>The 2% cap</h3>
+        <p>&ldquo;Except for changes in ownership or new construction, the base year value increase is limited to 2% per year (or less if the California Consumer Price Index is below 2%).&rdquo;</p>
+        <p class="small muted">Same source. This is why a long-held property keeps a small tax bill.</p>
+      </div>
+      <div class="card">
+        <h3>Change of ownership</h3>
+        <p>&ldquo;A new base year value is set by reassessment whenever there is a change of ownership or new construction.&rdquo; And inheritance from an estate or living trust is reassessed <strong>as of the date of death</strong>.</p>
+        <p class="small muted">Same source. This is the hinge of the whole plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reassess">
+    <h2>Reassessment at the inheritance <span class="h2-note">live at the inheritance year you select on the scenarios page</span></h2>
+    <div class="callout critical">
+      <h4>The single most important number on this site</h4>
+      <p>At the inheritance year, each property can end up in one of three states: the taxable value is <strong>preserved</strong> (the trust kept it), it is <strong>partly preserved</strong> (Prop&nbsp;19 applies to the Cupertino house and the allowance buys a small piece), or it is <strong>reset to market value</strong>. The table below shows all three. Everything on the <a href="scenarios.html">scenarios page</a> follows from this table.</p>
+    </div>
+    <div data-table="dynamic:reassessment"></div>
+  </section>
+
+  <section id="cup-rate">
+    <h2>PROPERTY_CUPERTINO &mdash; rate build-up</h2>
+    <div data-table="props.cupertino.officialTax"></div>
+  </section>
+
+  <section id="sf-rate">
+    <h2>PROPERTY_SF &mdash; rate</h2>
+    <div data-table="props.sf.officialTax"></div>
+  </section>
+
+  <section id="charts">
+    <h2>The tax drag, drawn out</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>PROPERTY_CUPERTINO</h3>
+        <div data-chart="chart:cupertino-tax"></div>
+      </div>
+      <div class="card">
+        <h3>PROPERTY_SF</h3>
+        <div data-chart="chart:sf-tax"></div>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card">
+        <h3>PROPERTY_CUPERTINO market value</h3>
+        <div data-chart="chart:cupertino-value"></div>
+      </div>
+      <div class="card">
+        <h3>PROPERTY_SF market value</h3>
+        <div data-chart="chart:sf-value"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proj-cup">
+    <h2>PROPERTY_CUPERTINO &mdash; year-by-year projections</h2>
+    <h3>Scenario 1: the assessed value is preserved</h3>
+    <div data-table="dynamic:proj-cupertino-base"></div>
+    <h3 style="margin-top:26px">Scenario 2: full reassessment to market value at the inheritance</h3>
+    <div data-table="dynamic:proj-cupertino-full"></div>
+    <div class="callout warning">
+      <p><strong>Note on Scenario 1.</strong> The starting assessed value used for this series is an <strong>illustrative placeholder</strong> because the parcel&rsquo;s 2026 assessed value could not be recovered from the owner&rsquo;s source spreadsheet (flag F16). Replace it with the value from the County Assessor record and the whole series re-runs. Scenario 2 does not depend on it &mdash; it is computed from market value and the official rate.</p>
+    </div>
+  </section>
+
+  <section id="proj-sf">
+    <h2>PROPERTY_SF &mdash; year-by-year projections</h2>
+    <h3>Scenario 1: the assessed value is preserved</h3>
+    <div data-table="dynamic:proj-sf-base"></div>
+    <h3 style="margin-top:26px">Scenario 2: full reassessment at the inheritance (the expected outcome)</h3>
+    <div data-table="dynamic:proj-sf-full"></div>
+    <div class="callout warning">
+      <p><strong>Why Scenario 2 is the expected outcome for PROPERTY_SF.</strong> Prop&nbsp;19 excludes only the transferor&rsquo;s <em>principal residence</em>. A three-unit building with two tenancies is an investment property, and the BOE&rsquo;s own Prop&nbsp;19 page confirms that &ldquo;other real property&rdquo; gets no exclusion. See flags F10 and F11 on the <a href="flagged.html">Flagged for review</a> page.</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Executive summary</a></li>
+          <li><a href="properties.html">Properties &amp; owner data</a></li>
+          <li><a href="property-tax.html">Property tax &amp; projections</a></li>
+          <li><a href="operating-costs.html">Operating costs</a></li>
+          <li><a href="inheritance-process.html">Inheritance process</a></li>
+          <li><a href="inheritance-taxes.html">Tax thresholds &amp; pending law</a></li>
+          <li><a href="scenarios.html">Scenario model</a></li>
+          <li><a href="flagged.html">Flagged for review</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>How to read the badges</h4>
+        <ul>
+          <li><span class="badge official">official</span> confirmed against a government or official rate source</li>
+          <li><span class="badge owner">owner</span> supplied by the owner &mdash; not verified</li>
+          <li><span class="badge derived">derived</span> computed from other stated figures</li>
+          <li><span class="badge assumption">assumption</span> a planning assumption with no official source</li>
+          <li><span class="badge unverified">unverified</span> could not be confirmed &mdash; left blank</li>
+          <li><span class="badge pending">pending</span> not yet published or not yet in force</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy</h4>
+        <p>No name, street address, parcel number, account number or any other personal identifier appears anywhere on this site. The two properties are referred to only as <strong>PROPERTY_CUPERTINO</strong> and <strong>PROPERTY_SF</strong>; the owner as <strong>OWNER</strong>.</p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This dashboard is decision-support analysis, not legal, tax or investment advice. Every figure is either traced to the official source linked beside it or flagged as unverified. The figures marked &ldquo;owner&rdquo; are the owner&rsquo;s own estimates and have not been independently confirmed. Confirm the trust, Prop&nbsp;19 and estate-tax conclusions with a California estate-planning attorney before acting. &nbsp;&middot;&nbsp; Data as of <span data-year>6 November 2026</span>.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
