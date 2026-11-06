@@ -8,7 +8,8 @@ Static study comparing live-in / rent / sell-and-reinvest for two inherited prop
 - `scripts/verify_history.py` — line-by-line check of user-supplied tax/assessment history
 - `scripts/build_site.py` — builds `site/` from `data/`
 - `scripts/check_site.py` — link/anchor/source/privacy checks (must pass before deploy)
-- `.github/workflows/pages.yml` — rebuilds, checks, and deploys to GitHub Pages on push to `main`
+- `.github/workflows/pages.yml` — rebuilds and checks the site on every push and PR (blocks a broken site)
+- `index.html` (repo root) — redirects to `site/index.html`; GitHub Pages serves the branch root, so a push to `main` publishes the site
 
 Rebuild locally:
 ```
