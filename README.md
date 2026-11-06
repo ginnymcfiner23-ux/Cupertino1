@@ -1,19 +1,56 @@
-# Cupertino1 — inheritance decision study
+# Cupertino1
 
-Static study comparing live-in / rent / sell-and-reinvest for two inherited properties (Cupertino, CA and San Francisco, CA), with official-source citations and a Flagged for Review page.
+House inheritance decision dashboard — Cupertino, CA (ZIP 95014) and San Francisco, CA (ZIP 94122).
 
-- Live site: https://ginnymcfiner23-ux.github.io/Cupertino1/
-- `data/` — sources register, verified facts (blank + flagged when unverified), user inputs (unverified), flags, projection outputs
-- `model/projections.py` — projection and decision model (standard library)
-- `scripts/verify_history.py` — line-by-line check of user-supplied tax/assessment history
-- `scripts/build_site.py` — builds `site/` from `data/`
-- `scripts/check_site.py` — link/anchor/source/privacy checks (must pass before deploy)
-- `.github/workflows/pages.yml` — rebuilds and checks the site on every push and PR (blocks a broken site)
-- `index.html` (repo root) — redirects to `site/index.html`; GitHub Pages serves the branch root, so a push to `main` publishes the site
+## Purpose
 
-Rebuild locally:
-```
-python3 model/projections.py && python3 scripts/verify_history.py && python3 scripts/build_site.py && python3 scripts/check_site.py
-```
+Collect, organize, and analyze the requirements for deciding what to do with a Cupertino house planned to pass by **trust inheritance around 2040–2050**: live in it, rent it, or sell it and reinvest the proceeds. The existing San Francisco home (three units, two rented) is kept in the decision frame.
+
+## Live site
+
+GitHub Pages site: https://ginnymcfiner23-ux.github.io/Cupertino1/
+
+Pages:
+- `index.html` — Executive summary
+- `cupertino.html` — Cupertino property: taxes, costs, Proposition 19 impact
+- `san-francisco.html` — San Francisco property: rental income and costs
+- `inheritance-taxes.html` — Federal & California estate/inheritance tax thresholds, step-up in basis, laws under discussion
+- `inheritance-process.html` — Step-by-step California trust administration process
+- `projections.html` — Year-by-year projections to 2050, scenarios, sell-vs-keep analysis, recommendation
+- `flagged-review.html` — Unverified items flagged for owner review
+
+## Privacy
+
+Personal information is the top priority. Names, addresses, phone numbers, and account details are replaced with placeholders (`[OWNER NAME]`, `[DECEASED/GRANTOR NAME]`, `[TRUST NAME]`, `[PROPERTY ADDRESS]`, `[APN / PARCEL NO.]`, `[TRUSTEE NAME]`, `[SUCCESSOR TRUSTEE NAME]`) everywhere on the site. No personal information appears in tables or pages. Anything personal discovered during research is for internal use only and must not appear in the final website product.
+
+## Key findings (Nov 2026)
+
+- **California has no inheritance tax and no state estate tax; inheritance is not taxable income.** Source: CA Franchise Tax Board, "Gifts and inheritance" (ftb.ca.gov).
+- **Federal estate tax exemption (2026): $15,000,000 per person; $30,000,000 per married couple with portability; top rate 40%.** Source: IRS.gov, Estate tax (2026 filing threshold $15,000,000). Set by Pub. L. 119-21 § 70106 (One Big Beautiful Bill Act, signed July 4, 2025), amending IRC § 2010(c); indexed for inflation after 2026.
+- **Step-up in basis:** inherited property basis resets to fair market value at date of death → selling shortly after inheritance generally produces little or no capital gains tax. Source: IRS Publication 551 / 559 (IRC § 1014).
+- **Proposition 19 (effective Feb 16, 2021):** keeping an inherited California home as a rental/second home triggers full reassessment to market value; an heir who moves in as primary residence (file BOE-266 within 1 year, BOE-19-P within 3 years) keeps assessed value + $1M cap (biennially adjusted). Source: CA Board of Equalization, boe.ca.gov/prop19.
+- **Bottom line (illustrative, not advice):** sell the Cupertino house shortly after inheritance and reinvest; keep the San Francisco home (low assessed value ≈ $2,439/yr tax per owner records + ≈ $7,150/month rental income while living in the third unit). Keeping the Cupertino house as a rental is projected to carry ≈ $58,000–81,000/yr property tax alone by 2045–2050 (mid case) — likely above achievable rent.
+
+## Verification standard
+
+Every table row on the site links to an official source (irs.gov, ftb.ca.gov, boe.ca.gov, sccassessor.org, sfassessor.org, sfpuc.gov, sjwater.com/CPUC, pge.com/CPUC, insurance.ca.gov, congress.gov, courts.ca.gov, leginfo.legislature.ca.gov), or the cell is left blank and flagged as unverified on the Flagged for Review page. No values are inferred or filled in. Projections are explicitly labeled assumptions and are never presented as verified facts.
+
+## Status
+
+Site content complete; verification against official sources in progress. Unverified items are listed on the Flagged for Review page and do not block publication.
+
+---
+
+## Inheritance decision study (session 92c8488c) — data-driven build
+
+A second, source-tracked build of the same study lives in `site/` (open `site/index.html`, or use the link on the root dashboard). It separates verified values (official sources, row by row) from user-provided inputs (labeled unverified) and flags everything else as blank.
+
+- `data/` — source register with access record, verified facts (blank + flagged when unverified), user inputs, flags F-01 to F-25, projection outputs
+- `model/projections.py` — 2026–2065 annual projection and after-tax sell / live / rent / keep comparison (base, low, high)
+- `scripts/verify_history.py` — line-by-line recheck of the user's tax and assessment history
+- `scripts/build_site.py` — builds `site/` from `data/`; `scripts/check_site.py` — link, anchor, source and privacy checks
+- `.github/workflows/pages.yml` — rebuilds and checks the site on every push and PR
+
+Rebuild: `python3 model/projections.py && python3 scripts/verify_history.py && python3 scripts/build_site.py && python3 scripts/check_site.py`
 
 Not tax, legal, or investment advice. Personal information is withheld.

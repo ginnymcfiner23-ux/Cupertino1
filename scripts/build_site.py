@@ -53,14 +53,14 @@ def page(fname, title, body, lead=""):
     head = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)} · Inheritance decision study</title>
-<link rel="stylesheet" href="assets/style.css"></head><body>
+<link rel="stylesheet" href="assets/study.css"></head><body>
 <header><div class="brand">Inheritance decision study <span>2040–2050 trust scenario</span></div>
 <nav>{nav}</nav></header><main>
 <h1>{e(title)}</h1>{('<p class="lead">' + lead + '</p>') if lead else ''}
 <p class="disclaimer">Not tax, legal, or investment advice. Projections are illustrative. Values marked <span class="badge user">USER-PROVIDED</span> are inputs not verified against an official source. Blank cells are unverified and flagged.</p>"""
     foot = f"""</main><footer>Data as of {TODAY}. Official sources are linked per row. Built from <code>data/*.json</code> by <code>scripts/build_site.py</code>.
 Personal information is withheld. Placeholders: Property A (Cupertino), Property B (San Francisco).</footer>
-<script src="assets/app.js"></script></body></html>"""
+<script src="assets/study.js"></script></body></html>"""
     (SITE / fname).write_text(head + body + foot, encoding="utf-8")
 
 # ----------------------------------------------------------------- derived numbers
@@ -314,7 +314,7 @@ page("sources.html", "Sources", body)
 
 # ----------------------------------------------------------------- assets
 (SITE / "assets").mkdir(parents=True, exist_ok=True)
-(SITE / "assets" / "style.css").write_text("""
+(SITE / "assets" / "study.css").write_text("""
 :root{--ink:#1b2430;--muted:#5a6572;--line:#d9dee5;--bg:#f7f8fa;--ok:#1b7f3b;--warn:#b35c00;--user:#3459a6;--accent:#0b5cad}
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
 header{background:#14253a;color:#fff;padding:12px 20px}.brand{font-weight:700}.brand span{font-weight:400;opacity:.7;margin-left:8px;font-size:13px}
@@ -333,7 +333,7 @@ th{background:var(--bg);position:sticky;top:0}table.proj td{text-align:right}tab
 .warn{color:var(--warn)}.small{font-size:13px;color:var(--muted)}section.plan{background:var(--bg);border-radius:8px;padding:12px 18px}
 input.filter{margin:6px 0;padding:6px;width:280px;border:1px solid var(--line);border-radius:4px}
 """, encoding="utf-8")
-(SITE / "assets" / "app.js").write_text("""
+(SITE / "assets" / "study.js").write_text("""
 document.querySelectorAll('table[data-filter]').forEach(function(t){
   var box=document.createElement('input');box.className='filter';box.placeholder='Filter rows…';
   t.parentElement.insertBefore(box,t);
