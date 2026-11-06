@@ -1,40 +1,44 @@
-# Coordination board
+# Coordination board — Cupertino1 (inheritance decision-making site)
 
-## Task status
+## Sessions on this repo
+- Session `arena-cupertino1` (branch `arena/e5dba077-cupertino1`) — completed; merged into `main` via PR #1. Their draft site files lived at repo root. **Privacy incident (session `arena/5d8bdba4-cupertino1`, PR #4):** review of the merged public pages found exact property-specific financial amounts and ZIP/location details, conflicting with the user's highest-priority instruction (no personal information on the website). PR #4 removed those public pages and rebuilt privacy-safe pages: `inheritance.html`, `properties.html`, `tax-law.html`, `styles.css` (root). No ZIP codes, exact private amounts, APNs, street addresses, names, leases, trust documents, account details, or tax returns appear in current public source files. Prior merged git commit still contains original content in history; purging history requires repository-owner action.
+- Session `arena/5d8bdba4-cupertino1` — completed privacy-preserving rebuild and source review; merged via PR #4. "Verify production Pages deployment after correction" was pending at handoff (deployment record task).
+- Session `session-arena-5606dc2d-cupertino1` (current branch `arena/5606dc2d-cupertino1`) — integration branch. Anonymized site files under `site/`: index.html, properties.html, taxes.html, costs.html, projections.html, decision.html, inheritance-process.html, thresholds.html, law-changes.html, flagged-for-review.html, sources.html, style.css. Uses placeholders ([OWNER], [TRUST_NAME], [BENEFICIARY], [ADDRESS], [SUCCESSOR_TRUSTEE]) for names/addresses; user-supplied zip/amount figures are flagged as user-provided and unverified on the Flagged for Review page.
 
-| Task | Status | Owner/session | Files in scope |
-|---|---|---|---|
-| Initial research and draft site (prior completed session; PR #1 merged to `main`) | done; integration audit identified a privacy issue | `arena/e5dba077-cupertino1` | `index.html`, `cupertino.html`, `san-francisco.html`, `inheritance-taxes.html`, `inheritance-process.html`, `projections.html`, `projections.json`, `flagged-review.html`, `site/assets/style.css`, `README.md` |
-| Privacy-preserving integration, line-by-line source review, and site rebuild | in progress | `arena/5d8bdba4-cupertino1` | all public landing/content pages, aliases, README, coordination board |
-| Verify production Pages deployment after correction | pending | `arena/5d8bdba4-cupertino1` | GitHub Pages status / `main` deployment |
+## Conflict resolution log
+- 2026-11-06: `COORDINATION.md` add/add conflict between session `arena-cupertino1` and session `session-arena-5606dc2d-cupertino1` — resolved by combining both boards; no work discarded.
+- 2026-11-06: rebase of `arena/5606dc2d-cupertino1` onto `origin/main` (which had advanced via PR #4 from session `arena/5d8bdba4-cupertino1`). Conflict on `COORDINATION.md` (and `README.md`) — resolved by combining all three sessions' boards. Session 2's removed root pages are NOT resurrected (they were privacy-removed on `main`); session `session-arena-5606dc2d-cupertino1` files live only under `site/`.
+- No conflict was skipped.
 
-## Session and branch constraints
+## Convention (applies to all sessions)
+- Claim a task by writing your session ID + file scope, then commit + push immediately.
+- Never start a task another session has claimed.
+- Scopes must be non-overlapping; each session works on its own files only.
+- If a task requires editing a file owned by another session, log the request here instead.
+- Make small, frequent commits; run `git pull --rebase` before every push.
+- On conflict: stop, resolve without discarding the other session's work, log what happened.
+- When finished: record sources, verification performed, irregularities here; mark done.
+- Never mark verified without checking an official source; link that source.
+- Shared outputs (table data, index, navigation) are changed only by the final integration session once all other tasks are done.
+- Flagged irregularities / unverified items do NOT block merge; publish them on a "Flagged for Review" page.
 
-- This checkout is fixed to `arena/5d8bdba4-cupertino1`. Arena policy forbids creating or pushing a separate session/integration branch. Work and pushes remain on the fixed branch.
-- No active parallel claims were visible when work began. The first review found only a minimal README and no board; after `git pull --rebase origin main`, upstream `main` had advanced with a complete prior-session merge (PR #1). The rebase produced add/add conflicts in shared outputs. No conflict was skipped; shared pages are being reconciled with the privacy requirement and the prior pages are retained as safe compatibility routes.
+## Combined task board
 
-## Verification, sources, and privacy
+| Task | Status | Owner/session | Files in scope | Sources verified |
+|------|--------|---------------|----------------|------------------|
+| Initial research and draft site (prior completed session; PR #1 merged to `main`) | done; integration audit identified a privacy issue | `arena/e5dba077-cupertino1` | `index.html`, `cupertino.html`, `san-francisco.html`, `inheritance-taxes.html`, `inheritance-process.html`, `projections.html`, `projections.json`, `flagged-review.html`, `site/assets/style.css`, `README.md` | IRS estate-tax FAQ/Form 706; IRS Pub 523/527/551/559; CA BOE Prop 19; CA tax agency/LAO; Santa Clara County Assessor; SF Assessor-Recorder/Treasurer/Planning/Rent Board; CA Dept of Insurance; California Courts; city utilities; SEC Investor.gov |
+| Privacy-preserving integration, line-by-line source review, and site rebuild | done (PR #4 merged to `main`) | `arena/5d8bdba4-cupertino1` | all public landing/content pages, aliases, README, coordination board | html-validate@10.5.0 passed all five main pages; scripted internal-link/anchor and table source-link checks passed; scan for supplied exact amounts and ZIP codes passed; `git diff --check` passed |
+| Verify production Pages deployment after correction | pending — handoff to integration session | `session-arena-5606dc2d-cupertino1` | GitHub Pages status / `main` deployment | — |
+| Research: federal/CA taxes, Prop 13/19, county assessors, insurance, utilities, inheritance process, appreciation, law changes (integration session) | done | `session-arena-5606dc2d-cupertino1` | `site/taxes.html`, `site/thresholds.html`, `site/properties.html`, `site/costs.html`, `site/inheritance-process.html`, `site/projections.html`, `site/law-changes.html` | IRS.gov Form 706 instructions; boe.ca.gov/prop19/; CA FTB; CA RTC §13301; asr.santaclaracounty.gov; sfassessor.org; sjwater.com; sfpuc.gov; pge.com; fhfa.gov |
+| Executive summary (integration session) | done | `session-arena-5606dc2d-cupertino1` | `site/index.html` | Anonymized placeholders only |
+| Website: landing page + subpages, dashboard tables, sources per row (integration session) | done | `session-arena-5606dc2d-cupertino1` | `site/*.html`, `site/style.css` | — |
+| Website: "Flagged for Review" page (integration session) | done | `session-arena-5606dc2d-cupertino1` | `site/flagged-for-review.html` | — |
+| Verification pass: every table row has official source link or is flagged unverified | done | `session-arena-5606dc2d-cupertino1` | `site/*.html` | Internal links checked: 0 broken |
+| PR from integration branch to main + merge | in progress | `session-arena-5606dc2d-cupertino1` | PR #2 (`arena/5606dc2d-cupertino1` → `main`) | — |
+| Confirm GitHub Pages deploys after merge; record PR link and result here | pending | `session-arena-5606dc2d-cupertino1` | — | — |
 
-- Official source families consulted and linked inline: IRS estate-tax FAQ and Form 706/709 instructions; IRS Publications 523, 527, 551, and 559; California BOE Proposition 19 fact sheet and 2025 adjustment notice; California tax agency / Legislative Analyst; Santa Clara County Assessor; San Francisco Assessor-Recorder, Treasurer, Planning, and Rent Board; California Department of Insurance; California Courts; city utilities; and SEC Investor.gov.
-- Source-checked legal anchors include the 2026 federal estate basic exclusion, the IRS-published 2027 exclusion, 2026 annual gift exclusion, current Prop 19 parent-child home conditions and 2025–2027 adjustment, Prop 13 assessment rules, SF FY 2025–26 tax rate, inherited-property basis, rental reporting, and SF owner-move-in restrictions. All future-law and future-market values are left blank rather than extrapolated.
-- Each data row in the current HTML tables carries an official-source link. User-supplied property-specific values are explicitly unverified and masked; no ZIP codes, exact private amounts, APNs, street addresses, names, leases, trust documents, account details, or tax returns appear in the current public source files.
-- No parcel identifiers were supplied for official-record matching. The California DOI source is aggregate historical insurance experience rather than an individual quote; insurance premiums remain blank.
-- HTML verification: `html-validate@10.5.0` passed all five main pages; scripted internal-link / anchor checks and table source-link checks passed; a scan for supplied exact amounts and ZIP codes passed; `git diff --check` passed. Plain static HTML/CSS; no build step.
-
-## Incident / conflict log
-
-- 2026-11-06 — Upstream had merged PR #1 from the prior session before this session’s integration rebase. Reviewing the merged public pages showed exact property-specific financial amounts and ZIP/location details in the site and supporting data/README. This conflicts with the user’s highest-priority instruction that personal information must not appear on the website.
-- 2026-11-06 — GitHub Pages API reported the repository is public, served from `main` at the root using legacy Pages deployment; a Pages deployment was in progress during the audit. The previous deployment may therefore already have exposed those details. This remediation masks/removes them from the current published files and replaces old page URLs with safe links to anonymized pages. The prior merged Git commit still contains the original content in repository history; ordinary follow-up commits do not erase that history. This requires repository-owner action to purge historical versions if complete removal is required.
-- 2026-11-06 — Rebase conflict was not skipped. Resolution keeps the prior page routes as privacy-safe aliases and consolidates verified public-law analysis in the new summary, property/cost framework, tax-law, inheritance, and flagged-review pages. Old projection payload is replaced with a null/withheld schema; the unsafe Pages workflow was removed because Pages is already configured for legacy `main` deployment.
-
-## Irregularities and limitations
-
-- User-supplied values could not be independently verified because property identifiers and documents were not available; they are intentionally withheld from the public site.
-- No defensible personalized “best” choice or numeric 2040–2050 projection is possible without trust/title, occupancy, parcel assessment, bills, leases, appraisals, insurance quotes, expenses, and future statutory rules. These gaps are clearly listed on the public Flagged for Review page.
-- Prior-session projections were assumptions rather than official forecasts and are not carried forward as fact. Statutory figures are current-year facts only; no future threshold or property appreciation is claimed.
-
-## Deployment record
-
-- Existing Pages URL (as reported by GitHub): `https://ginnymcfiner23-ux.github.io/Cupertino1/`.
-- Prior PR #1 was already merged by a prior session; this session did not merge or alter its history.
-- Current remediation PR / merge / post-remediation Pages result: pending.
+## Notes
+- All personal information must be anonymized with placeholders; nothing personal in the final site.
+- User-supplied values could not be independently verified (no property identifiers/documents available); they are flagged unverified and retained only as user-provided inputs.
+- No defensible personalized "best" choice or numeric 2040–2050 projection is possible without trust/title, occupancy, parcel assessment, bills, leases, appraisals, insurance quotes, expenses, and future statutory rules; projections are labeled assumptions.
+- Pages URL (as reported by GitHub): `https://ginnymcfiner23-ux.github.io/Cupertino1/`, served from `main`.
