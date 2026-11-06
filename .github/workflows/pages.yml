@@ -1,0 +1,31 @@
+name: Build and check site
+
+# Pages is served from the branch (legacy mode, root /), so pushing to main publishes automatically.
+# This workflow rebuilds the site from data/ and blocks a broken site (links, anchors, sources, privacy).
+
+on:
+  push:
+    branches: [main, "arena/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Re-run projections, history check, and site build
+        run: |
+          python3 model/projections.py
+          python3 scripts/verify_history.py
+          python3 scripts/build_site.py
+      - name: Check site (links, anchors, sources, privacy)
+        run: python3 scripts/check_site.py
+      - name: Confirm committed site matches build
+        run: git diff --exit-code -- site/ || (echo "site/ is stale: run scripts/build_site.py and commit" && exit 1)

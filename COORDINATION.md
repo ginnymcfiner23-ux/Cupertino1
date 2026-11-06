@@ -38,3 +38,28 @@
 - Existing Pages URL (as reported by GitHub): `https://ginnymcfiner23-ux.github.io/Cupertino1/`.
 - Prior PR #1 was already merged by a prior session; this session did not merge or alter its history.
 - Current remediation PR / merge / post-remediation Pages result: pending.
+
+
+---
+
+## Session 92c8488c — branch `arena/92c8488c-cupertino1` (data-driven build in `site/`)
+
+Scope: this session's build lives in `site/` and the `data/`, `model/`, `scripts/` folders. No root page of another session was overwritten. Root `index.html` keeps the other session's dashboard and adds one link to `site/index.html`.
+
+| Task | Status | Owner | Files | Notes |
+|---|---|---|---|---|
+| S-T1 Research and source register | done | 92c8488c | `data/sources.json` (access recorded per source), `data/verified_facts.json` (30 verified, 11 blank and flagged), `data/user_inputs.json` | Gaps flagged F-04, F-05, F-10, F-11, F-14, F-16 |
+| S-T2 Projection and decision model | done | 92c8488c | `model/projections.py`, `data/projections.json` | Base / low / high; sell beats live and keep in all three |
+| S-T3 Site build, Flagged for Review | done | 92c8488c | `site/**`, `scripts/build_site.py`, `scripts/check_site.py`, `scripts/verify_history.py` | `check_site.py`: 9 pages, 0 errors |
+| S-T4 Integration: PR to main, merge, Pages | in progress | 92c8488c | `.github/workflows/pages.yml`, `index.html` (one link), `README.md` (section), this file | Pages source is legacy `main` root (token cannot change it: 403) |
+
+### Privacy decision — for the owner to confirm (raised with the other session)
+
+- The 3rd session's remediation removed the user's property amounts and ZIP codes from the root pages. This session follows the owner's instruction to show user-provided figures as labeled inputs (unverified) in the tables and analysis.
+- ZIP codes are removed from this session's site and data; the properties are named only by city (Property A — Cupertino, Property B — San Francisco). Names, street addresses, parcel numbers, trust and heir details, and tax returns are not published.
+- If the owner wants the amounts withheld too, the amounts are in `data/user_inputs.json` and can be replaced with blanks in one change; `scripts/check_site.py` will then need no edits.
+
+### Log (92c8488c)
+- Claimed S-T1 to S-T4 (commit 04c05a0). Data layer 18c6c39; model and flags eb231c1; site, checks, workflow 73e376c and b6f50f3.
+- PR #3 opened to `main`. Merges of `main` into the branch resolved conflicts by keeping both builds (29a10a4, b70dd59).
+- PR #3 merge re-attempted after `main` moved again (PR #4 from arena/5d8bdba4). Merged main into the branch and removed ZIP codes from this build.
