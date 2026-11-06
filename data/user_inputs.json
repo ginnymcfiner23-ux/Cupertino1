@@ -3,7 +3,7 @@
   "note": "Values supplied by the user. They are shown on the site only in the 'User-provided (unverified)' tables with a flag and an official verification link. They are never presented as verified facts.",
   "anonymization": "Property A and Property B are placeholder names. No street addresses, parcel numbers (APNs), owner names, or trust names are stored in this repository.",
   "property_a": {
-    "label": "Property A — Cupertino, CA (ZIP 95014)",
+    "label": "Property A — Cupertino, CA",
     "estimated_market_value_nov_2026": 3100000,
     "water_monthly_est_range": [100, 150],
     "solar_net_credit_monthly_est_range": [10, 20],
@@ -26,7 +26,7 @@
     ]
   },
   "property_b": {
-    "label": "Property B — San Francisco, CA (ZIP 94122), 3 units (2 rented)",
+    "label": "Property B — San Francisco, CA, 3 units (2 rented)",
     "estimated_market_value_nov_2026": 1800000,
     "units": 3,
     "units_rented": 2,

@@ -22,7 +22,7 @@ for name, text in pages.items():
     text_only = re.sub(r"<[^>]+>", " ", text)
     for bad in (r"[\(\[,:=]\s*None\b", r"\bNone\s*[\)\],}]", r"\bnan\b", r"\{[a-z_]+\}"):
         if re.search(bad, text_only): errors.append(f"{name}: leaked token matching {bad}")
-    for pat in (r"\bAPN\b", r"\b\d{3,5} [A-Z][a-z]+ (St|Ave|Rd|Dr|Way|Ct|Ln|Blvd)\b", r"@[a-z]+\.", r"\bTrust of\b", r"\bnetherlands\b", r"\bNL\b"):
+    for pat in (r"\bAPN\b", r"\b\d{3,5} [A-Z][a-z]+ (St|Ave|Rd|Dr|Way|Ct|Ln|Blvd)\b", r"@[a-z]+\.", r"\bTrust of\b", r"\bnetherlands\b", r"\bNL\b", r"\b9[0-9]{4}\b", r"\bZIP\b"):
         if re.search(pat, text_only, re.I): errors.append(f"{name}: possible personal/identifying text ({pat})")
 # every verified fact row must cite at least one source id that exists and is official
 sources = {s["id"]: s for s in json.loads((ROOT / "data/sources.json").read_text())["sources"]}

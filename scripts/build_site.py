@@ -130,11 +130,11 @@ for k, lab in (("property_a", "A · Cupertino"), ("property_b", "B · San Franci
         if c["status"] == "MISMATCH": fid = "F-02"
         chk_rows.append([lab, str(c["year"]), c["field"], c.get("computed_pct", "—") if c.get("computed_pct") is None else f'{c["computed_pct"]:+.2f}%',
                          "blank" if c.get("stated_pct") is None else f'{c["stated_pct"]:+.1f}%', e(c["status"]), flaglink(fid)])
-body = f"""<section><h2>Property A · Cupertino (ZIP 95014)</h2>
+body = f"""<section><h2>Property A · Cupertino</h2>
 <p>Estimated value ${U['property_a']['estimated_market_value_nov_2026']:,} (user). Assessed values and property taxes are the user's history. The 2026 row has no tax yet.</p>
 {hist_rows('property_a','A')}
 <p class="small">Effective tax rate on assessed value, latest year with a tax figure (2025): <strong>{pct(A_eff,3)}</strong> (computed, user data; see <a href="flagged.html#F-03">F-03</a>).</p></section>
-<section><h2>Property B · San Francisco (ZIP 94122), 3 units</h2>
+<section><h2>Property B · San Francisco, 3 units</h2>
 <p>Estimated value ${U['property_b']['estimated_market_value_nov_2026']:,} (user). Two of three units rented, total ${U['property_b']['rent_total_monthly']:,}/mo (user).</p>
 {hist_rows('property_b','B')}
 <p class="small">Effective tax rate on assessed value (2025): <strong>{pct(B_eff,3)}</strong> (computed; see <a href="flagged.html#F-03">F-03</a>).</p></section>
