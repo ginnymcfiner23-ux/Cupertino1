@@ -28,4 +28,8 @@ jobs:
       - name: Check site (links, anchors, sources, privacy)
         run: python3 scripts/check_site.py
       - name: Confirm committed site matches build
-        run: git diff --exit-code -- site/ || (echo "site/ is stale: run scripts/build_site.py and commit" && exit 1)
+        run: |
+          if ! git diff --exit-code -- site/; then
+            echo "site/ is stale: run scripts/build_site.py and commit"
+            exit 1
+          fi
