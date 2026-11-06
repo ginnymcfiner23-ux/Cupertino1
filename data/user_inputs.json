@@ -1,0 +1,51 @@
+{
+  "status": "USER-PROVIDED — NOT INDEPENDENTLY VERIFIED",
+  "note": "Values supplied by the user. They are shown on the site only in the 'User-provided (unverified)' tables with a flag and an official verification link. They are never presented as verified facts.",
+  "anonymization": "Property A and Property B are placeholder names. No street addresses, parcel numbers (APNs), owner names, or trust names are stored in this repository.",
+  "property_a": {
+    "label": "Property A — Cupertino, CA (ZIP 95014)",
+    "estimated_market_value_nov_2026": 3100000,
+    "water_monthly_est_range": [100, 150],
+    "solar_net_credit_monthly_est_range": [10, 20],
+    "insurance_annual_guess": 1500,
+    "verify_links": ["S09","S11","S16","S23"],
+    "history": [
+      {"year":2026,"property_tax":null,"tax_change_pct_stated":null,"assessed_value":550537,"assessed_change_pct_stated":2.0},
+      {"year":2025,"property_tax":7207,"tax_change_pct_stated":2.9,"assessed_value":539743,"assessed_change_pct_stated":2.0},
+      {"year":2024,"property_tax":7003,"tax_change_pct_stated":1.2,"assessed_value":529161,"assessed_change_pct_stated":2.0},
+      {"year":2023,"property_tax":6917,"tax_change_pct_stated":2.4,"assessed_value":518786,"assessed_change_pct_stated":2.0},
+      {"year":2022,"property_tax":6755,"tax_change_pct_stated":1.4,"assessed_value":508614,"assessed_change_pct_stated":2.0},
+      {"year":2021,"property_tax":6662,"tax_change_pct_stated":1.5,"assessed_value":498642,"assessed_change_pct_stated":1.0},
+      {"year":2020,"property_tax":6565,"tax_change_pct_stated":null,"assessed_value":493530,"assessed_change_pct_stated":2.0},
+      {"year":2019,"property_tax":6565,"tax_change_pct_stated":2.8,"assessed_value":483854,"assessed_change_pct_stated":2.0},
+      {"year":2018,"property_tax":6383,"tax_change_pct_stated":null,"assessed_value":474368,"assessed_change_pct_stated":2.0},
+      {"year":2017,"property_tax":6383,"tax_change_pct_stated":-0.5,"assessed_value":465067,"assessed_change_pct_stated":2.0},
+      {"year":2016,"property_tax":6414,"tax_change_pct_stated":4.6,"assessed_value":455949,"assessed_change_pct_stated":1.5},
+      {"year":2015,"property_tax":6130,"tax_change_pct_stated":2.8,"assessed_value":449101,"assessed_change_pct_stated":2.0},
+      {"year":2014,"property_tax":5965,"tax_change_pct_stated":null,"assessed_value":440305,"assessed_change_pct_stated":0.5}
+    ]
+  },
+  "property_b": {
+    "label": "Property B — San Francisco, CA (ZIP 94122), 3 units (2 rented)",
+    "estimated_market_value_nov_2026": 1800000,
+    "units": 3,
+    "units_rented": 2,
+    "rent_total_monthly": 7150,
+    "water_monthly_est_range": [330, 400],
+    "electricity_monthly_est_range": [30, 70],
+    "insurance_annual_guess": 1500,
+    "verify_links": ["S12","S13","S14","S15"],
+    "history": [
+      {"year":2025,"property_tax":2439,"tax_change_pct_stated":5.3,"assessed_value":114248,"assessed_change_pct_stated":2.0},
+      {"year":2024,"property_tax":2315,"tax_change_pct_stated":6.2,"assessed_value":112008,"assessed_change_pct_stated":2.0},
+      {"year":2023,"property_tax":2179,"tax_change_pct_stated":3.4,"assessed_value":109814,"assessed_change_pct_stated":2.0},
+      {"year":2022,"property_tax":2107,"tax_change_pct_stated":2.0,"assessed_value":107662,"assessed_change_pct_stated":2.0},
+      {"year":2021,"property_tax":2066,"tax_change_pct_stated":-5.9,"assessed_value":105595,"assessed_change_pct_stated":1.0},
+      {"year":2020,"property_tax":2197,"tax_change_pct_stated":3.0,"assessed_value":104513,"assessed_change_pct_stated":2.0},
+      {"year":2019,"property_tax":2134,"tax_change_pct_stated":3.5,"assessed_value":102465,"assessed_change_pct_stated":2.0},
+      {"year":2018,"property_tax":2061,"tax_change_pct_stated":18.4,"assessed_value":100456,"assessed_change_pct_stated":2.0},
+      {"year":2017,"property_tax":1740,"tax_change_pct_stated":3.9,"assessed_value":98488,"assessed_change_pct_stated":2.0},
+      {"year":2016,"property_tax":1675,"tax_change_pct_stated":1.6,"assessed_value":96557,"assessed_change_pct_stated":1.5}
+    ]
+  }
+}
