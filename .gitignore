@@ -1,0 +1,3 @@
+# generated model artifacts (rebuild with scripts/model.py)
+build/
+__pycache__/

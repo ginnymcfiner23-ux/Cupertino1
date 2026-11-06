@@ -98,3 +98,61 @@
   quotes), F10 (a written trust-drafting opinion) and F16 (the owner's original spreadsheet).
 - **Deployment:** PR from `arena/19c970ac-cupertino1` to `main`; Pages source moved to
   `main` `/docs`. PR number, merge commit and deploy status are recorded below once known.
+
+---
+
+## Session 6099c2f2 — branch `arena/6099c2f2-cupertino1` (full brief: research + model + site + integration)
+
+- **Scope claimed (T01–T15 on this session's original board):** the complete owner brief —
+  research and line-by-line verification, executive summary, scenario model, static GitHub
+  Pages site with per-row official sources, flagged page, PR to `main`, merge, and Pages
+  confirmation. All tasks were claimed by this session at start (no other branches existed
+  then); later sessions' merged work was integrated, not overwritten (see conflicts below).
+- **Privacy position:** identical to session `19c970ac` and consistent with the owner's own
+  definition of personal information (names, addresses, phone numbers, account details).
+  No identifier of any kind is published (properties appear only as "Cupertino (95014)" /
+  "SF (94122)"); owner-supplied financial figures ARE published because the brief requires
+  them in tables, each row carrying an `owner`-style **User-provided · unverified** badge and
+  kept out of the official-source columns. Every other row carries an official source link
+  and one of five status badges (Verified / User-provided / Assumption / Flagged / Model).
+  Unverifiable values are blank or flagged, never inferred (14 flags, F-01…F-14).
+- **Deliverable:** `docs/decision/` — an 11-page decision centre (dashboard, executive
+  summary, properties + 2026–2050 projections, property-tax deep dive, operating costs,
+  live/rent/sell model with a 9-cell sensitivity grid, inheritance & estate tax,
+  step-by-step process, law watch incl. official Nov 3 2026 results, flagged page, source
+  index). Deterministic generator: `scripts/model.py` → `scripts/build_site.py`;
+  verifier: `scripts/check_links.py` (11 pages, 153 internal links, 40 external URLs,
+  0 errors at integration).
+- **Key verified anchors:** federal basic exclusion 2026 = $15,000,000 (IRS estate-tax
+  table; OBBBA P.L. 119-21 permanent, indexed from 2027; Rev. Proc. 2025-32 for $19,000
+  gift exclusion); California estate/inheritance tax = $0 (FTB, pick-up tax inoperative
+  after 2004); SF secured rate FY2026-27 = 1.18162182% (sftreasurer.org); Santa Clara Tax
+  Rate Book 2025-26 (1% max levy, 2% AV cap, observed TRA totals 1.14200%–1.24090%,
+  Cupertino = TRA prefix 013 per county planning table); Prop 19 conditions (BOE);
+  Prob. Code §16061.7 (60-day trustee notice) and §10810 (probate fee schedule);
+  Form 706 due 9 months (IRS); BLS CPI Sept 2026 +3.7% YoY; FHFA Q2 2026 US +2.1%
+  (Pacific ≈0%); 10-yr Treasury 4.84% on 2026-11-05; CA DOI 2024 avg homeowners premium
+  $1,967.59 and 2026 market-stabilisation news; CPUC Net Billing Tariff (D.22-12-056);
+  official SOS results for Props 1/3/37 passed, 40/43/45 failed (certification 2026-12-11).
+- **Model headline (base case: inherit 2045, 10 years, 3% home / 6% portfolio):**
+  C sell & reinvest $13.75M > A live in Cupertino $12.19M > B rent (reassessed) $12.07M;
+  C wins 8 of 9 sensitivity cells; B is cash-flow negative after Prop 19 reassessment
+  (−$15.7k/yr in 2045). This complements — does not contradict — session 19c970ac's
+  "keep Cupertino, live in it" guidance: if the owner will live in Cupertino, Option A is
+  the plan (and its consumption value is not counted in the profit metric).
+- **Differences flagged vs other sessions' work:** user-implied tax rates (Cupertino
+  1.335%, SF 2.13%) exceed official value-based rates → reconciled with flagged flat
+  direct-charge allowances; Cupertino exact TRA total not machine-extractable → model uses
+  1.20% inside the observed official range; HUD FMR query tool returned empty tables →
+  rent benchmarks left flagged (never guessed).
+- **Merge conflicts resolved (this PR):** add/add conflicts on `index.html`,
+  `COORDINATION.md`, and a content conflict on `README.md` against `origin/main`
+  (sessions e5dba077/5d8bdba4/92c8488c/19c970ac). Resolution: `index.html` kept as
+  main's anonymised executive summary (their claimed scope); `COORDINATION.md` kept as
+  main's board with this session's section appended; `README.md` merged to describe all
+  three publications; this session's site relocated to `docs/decision/` (self-contained)
+  so main's `docs/` dashboard and root anonymised site are untouched. One integration
+  edit: a footer link from `docs/index.html` to `decision/index.html` (logged here).
+- **Cross-session requests:** none open. Note for sessions re-running `tools/verify.py`:
+  its privacy scan may flag owner figures under `docs/decision/` — those figures are
+  owner-authorized per the brief (badged), same policy as the main `docs/` dashboard.
