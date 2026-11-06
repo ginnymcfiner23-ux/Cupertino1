@@ -9,20 +9,20 @@
 | ID | Task | Status | Owner | Files touched | Sources verified | Notes |
 |----|------|--------|-------|---------------|------------------|-------|
 | T1 | Repo review & coordination setup | done | arena-cupertino1 | COORDINATION.md, README.md | n/a | Repo was empty except README.md |
-| T2 | Research: federal estate/gift tax & step-up in basis (IRS) | in progress | arena-cupertino1 | site/inheritance-taxes.md | irs.gov | In progress |
-| T3 | Research: CA inheritance/estate tax, Prop 13, Prop 19 parent-child reassessment | unclaimed | arena-cupertino1 | site/inheritance-taxes.md | boe.ca.gov, ftb.ca.gov, caassessor | |
-| T4 | Research: Santa Clara County / Cupertino property tax & assessments | unclaimed | arena-cupertino1 | site/cupertino.md | sccassessor.org | |
-| T5 | Research: San Francisco property tax & assessments | unclaimed | arena-cupertino1 | site/san-francisco.md | sfassessor.org | |
-| T6 | Research: homeowners insurance rates CA (CDI) for 95014 & 94122 | unclaimed | arena-cupertino1 | site/cupertino.md, site/san-francisco.md | insurance.ca.gov | |
-| T7 | Research: water & electricity costs (Valley Water, SJWC, PG&E NEM 3.0) | unclaimed | arena-cupertino1 | site/cupertino.md | valleywater.org, pge.com | |
-| T8 | Research: SF water/electric (SFPUC) for rental property | unclaimed | arena-cupertino1 | site/san-francisco.md | sfpuc.org | |
-| T9 | Build projections: property value, tax, insurance, water, electric by year | unclaimed | arena-cupertino1 | site/projections.md | n/a (assumptions labeled) | Label all projections as assumptions |
-| T10 | Step-by-step inheritance process (CA probate/trust) | unclaimed | arena-cupertino1 | site/inheritance-process.md | courts.ca.gov | |
-| T11 | Executive summary | unclaimed | arena-cupertino1 | README.md, site/executive-summary.md | n/a | |
-| T12 | Site build: landing page + category subpages, tables with source links | unclaimed | arena-cupertino1 | site/*.html, assets/ | n/a | |
-| T13 | Verification: every table row has official source link or is flagged unverified | unclaimed | arena-cupertino1 | site/flagged-review.md | n/a | Line-by-line |
-| T14 | GitHub Pages enablement, build check, broken-link check | unclaimed | arena-cupertino1 | .github/workflows (optional), repo settings via gh | n/a | |
-| T15 | Pull request to main, merge, confirm Pages deploy, record PR link | unclaimed | arena-cupertino1 | n/a | n/a | Final integration |
+| T2 | Research: federal estate/gift tax & step-up in basis (IRS) | done | arena-cupertino1 | site/inheritance-taxes.md | irs.gov estate-tax page (2026 threshold $15,000,000; Form 706; portability); IRS Pub 551/559 (step-up basis, IRC §1014); Pub. L. 119-21 §70106 | Complete |
+| T3 | Research: CA inheritance/estate tax, Prop 13, Prop 19 parent-child reassessment | done | arena-cupertino1 | site/inheritance-taxes.md, site/cupertino.md | ftb.ca.gov (gifts/inheritance not income); boe.ca.gov/prop19 + BOE LTA 2026/026; sccassessor.org 2026 booklet; CA Constitution art. XIII A; RTC 51/110.1/13301 | Complete |
+| T4 | Research: Santa Clara County / Cupertino property tax & assessments | done | arena-cupertino1 | site/cupertino.md | sccassessor.org 2026 booklet (Prop 13 mechanics, supplemental assessment, PCOR, inheritance reassessed at date of death); composite residential rate ~1.08–1.30% | Complete |
+| T5 | Research: San Francisco property tax & assessments | done | arena-cupertino1 | site/san-francisco.md | sfassessor.org (NAV/roll); SF combined rate 1.1763% FY24-25 (SF Controller) | Complete |
+| T6 | Research: homeowners insurance rates CA (CDI) | done | arena-cupertino1 | site/cupertino.md, site/san-francisco.md | insurance.ca.gov CDI data call 2025: $2,339.99 statewide avg (6,052,334 policies); NAIC 2023 CA HO-3 $1,655. ZIP-specific quotes not published by CDI → flagged unverified | Complete |
+| T7 | Research: water & electricity (SJWC, Valley Water, PG&E NEM 3.0) | done | arena-cupertino1 | site/cupertino.md | sjwater.com AL 628 (CPUC D.24-12-077): 2026 rates, avg residential bill ~$137–145/mo; CPUC NEM 3.0 D.22-12-016 (eff. 4/15/2023); PG&E Solar Billing Plan, Base Services Charge ~$24/mo | Complete |
+| T8 | Research: SF water/electric (SFPUC) | done | arena-cupertino1 | site/san-francisco.md | sfpuc.gov Prop 218 notice: avg single-family combined bill ~$171/mo → $189 from 7/1/2026 (+10.5%), ~$212 by July 2027 | Complete |
+| T9 | Build projections: property value, tax, insurance, water, electric by year | done | arena-cupertino1 | site/projections.md | n/a — all projection inputs labeled assumptions; no official source for future appreciation | Complete |
+| T10 | Step-by-step inheritance process (CA trust administration) | done | arena-cupertino1 | site/inheritance-process.md | Cal. Prob. Code §16061.7 (60-day notice, 120-day contest), BOE forms BOE-19-P/BOE-266, county recorder PCOR, sccassessor.org booklet | Complete |
+| T11 | Executive summary | done | arena-cupertino1 | README.md, site/index.html | n/a | Complete |
+| T12 | Site build: landing page + category subpages, tables with source links | done | arena-cupertino1 | index.html, cupertino.html, san-francisco.html, inheritance-taxes.html, inheritance-process.html, projections.html, flagged-review.html, site/assets/style.css | n/a | Complete |
+| T13 | Verification: every table row has official source link or is flagged unverified; broken-link check | in progress | arena-cupertino1 | site/flagged-review.md | Link check of all internal/external hrefs pending | In progress |
+| T14 | GitHub Pages enablement, deploy check | unclaimed | arena-cupertino1 | repo settings via gh | Pending | |
+| T15 | Pull request to main, merge, confirm Pages deploy, record PR link | unclaimed | arena-cupertino1 | n/a | Pending | Final integration |
 
 ## Rules followed
 - One session per task; no task is started while another session claims it (single session here).
